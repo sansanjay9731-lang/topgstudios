@@ -1,0 +1,394 @@
+
+TOP G STUDIOS — UI/UX + MOTION DESIGN MASTER GUIDE FOR CLAUDE
+
+Brand Positioning
+
+Top G Studios is not a normal agency website.
+
+It should feel like:
+- A futuristic digital powerhouse
+- AI-native creative studio
+- Cinematic luxury tech brand
+- High-end motion experience
+- Premium storytelling platform
+
+The experience must emotionally communicate:
+“The future of design, AI, growth, and digital systems.”
+
+Inspired by:
+- Neon
+- Apple
+- Linear
+- Stripe
+- Awwwards WebGL Collection
+
+==================================================
+CORE DESIGN PHILOSOPHY
+==================================================
+
+The Website Should Feel:
+- Cinematic
+- Futuristic
+- Smooth
+- Intelligent
+- Interactive
+- Premium
+- Dark luxury
+- Motion-first
+- AI-enhanced
+
+Avoid:
+- Template based
+- Corporate boring
+- Overcrowded layouts
+- Cheap animations
+- Generic SaaS UI
+- Bright startup visuals
+
+==================================================
+VISUAL LANGUAGE
+==================================================
+
+Primary Background Colors:
+#050505
+#0B0B0F
+#111111
+
+Accent Colors:
+Electric Blue → #4D7CFE
+Neon Purple → #7B61FF
+Cyber Cyan → #00D9FF
+Chrome Silver → #CFCFCF
+
+Glow Colors:
+rgba(77,124,254,0.45)
+rgba(123,97,255,0.40)
+
+==================================================
+TYPOGRAPHY SYSTEM
+==================================================
+
+Headings:
+- Space Grotesk
+- Neue Montreal
+- Satoshi
+
+Body:
+- Inter
+- General Sans
+
+Typography Rules:
+- Large cinematic headings
+- Minimal words
+- Spacious layouts
+- Bold visual hierarchy
+
+GOOD:
+BUILDING
+DIGITAL
+POWERHOUSES
+
+BAD:
+We help businesses grow using innovative marketing strategies
+
+==================================================
+UI STYLE GUIDE
+==================================================
+
+General Style:
+- Dark futuristic backgrounds
+- Soft glow edges
+- Minimal borders
+- Glassmorphism
+- Floating cards
+- Large spacing
+- Smooth gradients
+- Layered depth
+
+Card Style:
+background: rgba(255,255,255,0.04);
+backdrop-filter: blur(20px);
+border: 1px solid rgba(255,255,255,0.08);
+border-radius: 24px;
+
+==================================================
+MOTION DESIGN PRINCIPLES
+==================================================
+
+Motion should feel:
+- cinematic
+- elegant
+- intelligent
+- fluid
+- immersive
+
+Avoid:
+- fast
+- playful
+- cartoonish
+- overly bouncy transitions
+
+Animation Guidelines:
+- Slow easing
+- Smooth interpolation
+- Blur reveals
+- Parallax motion
+- Scroll storytelling
+- Floating movement
+- Depth transitions
+
+Recommended Stack:
+- Framer Motion
+- GSAP
+- Lenis
+- Three.js
+- React Three Fiber
+
+==================================================
+HERO SECTION GUIDE
+==================================================
+
+Goal:
+Create awe, curiosity, and authority instantly.
+
+Hero Layout:
+Left Side:
+THE FUTURE
+OF DIGITAL
+DOMINANCE
+
+Right Side:
+- Floating chrome object
+- Neon energy core
+- Mouse reactive motion
+- Animated particles
+
+Hero Effects:
+- Ambient glow
+- Light streaks
+- Motion blur
+- Grain texture
+- Noise overlay
+- Subtle particles
+
+==================================================
+3D / WEBGL GUIDE
+==================================================
+
+Use Three.js For:
+- Floating objects
+- Interactive backgrounds
+- AI particle systems
+- Dynamic lighting
+- Liquid shaders
+- Noise distortion
+- Camera movement
+
+Shader Style:
+- Neon bloom
+- Wave motion
+- Energy pulses
+- Gradient noise
+- Cyber fog
+
+==================================================
+UI COMPONENTS
+==================================================
+
+Buttons:
+- Rounded corners
+- Soft glow
+- Animated hover
+- Magnetic interaction
+
+Button CSS:
+border-radius: 999px;
+background: linear-gradient(...);
+box-shadow: 0 0 40px rgba(...);
+
+Hover Effects:
+- Glow intensifies
+- Slight scale increase
+- Gradient shifts
+- Mouse tracking
+
+==================================================
+NAVIGATION STYLE
+==================================================
+
+Navbar:
+- Transparent initially
+- Blur on scroll
+- Floating appearance
+- Minimal links
+- Thin typography
+
+==================================================
+SECTION DESIGN
+==================================================
+
+Each section should include:
+- Breathing space
+- Visual hierarchy
+- Layered depth
+- Animation entry
+- Cinematic transitions
+
+==================================================
+SERVICES SECTION
+==================================================
+
+Use floating glass cards.
+
+Each service card should include:
+- Icon
+- Title
+- Bold short statement
+- Hover interaction
+
+Suggested Services:
+- AI Systems
+- Funnels
+- Branding
+- SEO
+- Performance Marketing
+- Automation
+- Motion Graphics
+
+==================================================
+CASE STUDY SECTION
+==================================================
+
+Style:
+- Cinematic showcase
+- Hover zoom
+- Smooth reveal transitions
+- Animated metrics
+- Glowing borders
+- Scrolling interactions
+
+==================================================
+AI FUTURISTIC ELEMENTS
+==================================================
+
+Add:
+- HUD interfaces
+- Scanning lines
+- Radar grids
+- Neural network visuals
+- AI waveforms
+- Digital particles
+
+==================================================
+MICROINTERACTIONS
+==================================================
+
+Include:
+- Cursor effects
+- Hover glow
+- Magnetic buttons
+- Text reveal animations
+- Scroll-triggered transitions
+- Loading transitions
+- Blur fade effects
+
+==================================================
+LOADING SCREEN
+==================================================
+
+Include:
+- Logo animation
+- Digital boot sequence
+- Cinematic fade-in
+- Energy pulse animation
+
+==================================================
+IMAGE STYLE
+==================================================
+
+Use:
+- High contrast visuals
+- Dark cinematic renders
+- Chrome textures
+- Futuristic environments
+- Cyberpunk lighting
+- AI abstract visuals
+
+Avoid:
+- Generic stock images
+- Office people visuals
+- Corporate imagery
+
+==================================================
+CONTENT STYLE
+==================================================
+
+Tone:
+- Powerful
+- Minimal
+- Futuristic
+- Visionary
+- Confident
+
+GOOD:
+ENGINEERING DIGITAL EMPIRES
+
+BAD:
+We provide digital solutions for growing businesses
+
+==================================================
+PERFORMANCE RULES
+==================================================
+
+Website Must:
+- Load fast
+- Maintain 60fps
+- Optimize WebGL assets
+- Lazy load 3D components
+- Feel extremely smooth
+
+==================================================
+TECH STACK
+==================================================
+
+Frontend:
+- Next.js
+- React
+- Tailwind CSS
+
+Motion:
+- Framer Motion
+- GSAP
+- Lenis
+
+3D:
+- Three.js
+- React Three Fiber
+- GLSL Shaders
+
+==================================================
+PAGE STRUCTURE
+==================================================
+
+1. Hero
+2. Studio Philosophy
+3. Services
+4. Motion Showcase
+5. Case Studies
+6. AI Systems
+7. Testimonials
+8. CTA Section
+
+==================================================
+FINAL EXPERIENCE GOAL
+==================================================
+
+When users visit Top G Studios, they should feel:
+- impressed
+- immersed
+- emotionally hooked
+- inspired
+- confident in the brand
+
+The experience should communicate:
+“The future of creative agencies.”

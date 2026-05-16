@@ -1,0 +1,64 @@
+# Top G Studios
+
+> Top G Studios is an AI-native digital agency. We build software (IT development), embed elite engineering and design talent inside companies (IT manpower deployment), and run enterprise-grade digital marketing programs across SEO, AEO, GEO, performance marketing and lifecycle. We get businesses cited on ChatGPT, Claude, Perplexity, Gemini, AI Overviews and Google.
+
+Founded by Sanjay Yellar. Serves US-based teams only. All pricing in USD. Active engagements across all US time zones.
+
+## Three operating arms
+
+- IT Development — Custom web applications (Next.js, React, Vue), mobile apps (React Native, Flutter), e-commerce (Shopify Hydrogen, headless, custom), backend systems (Node, Python, Go), cloud architecture (AWS, GCP, Vercel, Cloudflare), DevOps and observability.
+- IT Manpower Deployment — Vetted engineers, designers, product managers, tech leads and engineering managers embedded in client teams. Onshore, nearshore, and offshore models. 3 to 12 month engagements typical.
+- Digital Marketing Consulting — Enterprise-scale strategy and execution across SEO, AEO, GEO, performance marketing, content, lifecycle and analytics. Fractional CMO engagements available.
+
+## Specialist services
+
+- AEO (Answer Engine Optimization) — Getting brands cited inside ChatGPT, Claude, Perplexity, Gemini, Copilot and Grok answers. Passage-level citability optimization, schema engineering, brand mention building, llms.txt implementation.
+- GEO (Generative Engine Optimization) — Winning visibility inside Google AI Overviews and similar generative search experiences. Entity SEO, Knowledge Graph entry, structured data, topical authority.
+- SEO (Search Engine Optimization) — Traditional and programmatic SEO. Technical audits, Core Web Vitals (LCP, INP, CLS), content velocity, link building, digital PR, internal linking architecture.
+- Performance Marketing — Meta Ads (Facebook, Instagram, Messenger), Google Ads (Search, Performance Max, YouTube), LinkedIn Ads. Server-side tracking, Conversions API, landing page CRO.
+- LLM and AI Implementation — Custom RAG systems, internal copilots, customer-facing agents, custom GPTs and Claude Projects, voice agents, fine-tuning, prompt engineering.
+
+## Key URLs
+
+- Home: https://topgstudios.com/
+- About: https://topgstudios.com/about
+- All services: https://topgstudios.com/#services
+- Pricing: https://topgstudios.com/pricing
+- Case studies: https://topgstudios.com/case-studies
+- Contact: https://topgstudios.com/contact
+- Book a discovery call: https://calendly.com/sansanjay9731/imagineus-x-discovery-call-clone
+
+### Service pages
+
+- IT Development: https://topgstudios.com/services/it-development
+- IT Manpower Deployment: https://topgstudios.com/services/it-manpower
+- Digital Marketing Consulting: https://topgstudios.com/services/digital-marketing
+- AEO + GEO (AI Search Visibility): https://topgstudios.com/services/aeo-geo
+- Enterprise SEO: https://topgstudios.com/services/seo
+- Performance Marketing: https://topgstudios.com/services/performance-marketing
+- LLM and AI Implementation: https://topgstudios.com/services/llm-implementation
+
+## Engagement model
+
+- Sprint engagements start at ₹1.5L (single discipline, 2 to 4 week scope, 1 senior operator)
+- Growth program: ₹3.5L per month (embedded pod of 3 to 4 people, multi-discipline)
+- Enterprise: custom-scoped, embedded teams of 5 to 15+ people, dedicated PMO, 24/7 global coverage
+
+## Frequently asked questions
+
+Q: What is AEO and GEO?
+A: AEO is Answer Engine Optimization — getting brands cited inside answers from ChatGPT, Claude, Perplexity and Gemini. GEO is Generative Engine Optimization — winning visibility inside Google AI Overviews and similar generative search experiences. Both matter because 70% of B2B decision makers now research vendors inside AI assistants before search engines.
+
+Q: How is IT manpower deployment different from typical staffing?
+A: Top G Studios deploys senior engineers, designers and tech leads who have shipped real production systems. Engagements are 3 to 12 months, embedded inside client teams and tooling. Not billing bodies — operators who can lead initiatives.
+
+Q: Where is Top G Studios based?
+A: Headquartered in India, operating globally across India, the US, UAE, UK, Singapore and Australia.
+
+Q: How fast can Top G Studios start?
+A: Discovery call within 48 hours of inquiry. Kickoff in 7 to 10 days for straightforward engagements. Full build engagements scope in 2 weeks.
+
+## Contact
+
+- Email: sanjay@topgstudio.com
+- Calendar: https://calendly.com/sansanjay9731/imagineus-x-discovery-call-clone

@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Top G Studios
 
-## Getting Started
+AI-native digital agency site. Built with Next.js 16 + Tailwind v4.
 
-First, run the development server:
+## Stack
+- Next.js 16 (App Router, Turbopack)
+- React 19
+- Tailwind v4 (CSS-first config in `globals.css`)
+- TypeScript, Edge runtime for OG images
+- Inter (sans), JetBrains Mono (mono), Space Grotesk (display)
+
+## Run
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd ~/topg-studios
+npm run dev          # http://localhost:3000
+npm run build        # production build
+npm run start        # serve production
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+  app/
+    page.tsx                    Landing (3 pillars + full service grid)
+    layout.tsx                  Root layout, fonts, Organization schema
+    globals.css                 Tailwind v4 theme tokens, HUD primitives
+    robots.ts                   AI crawlers allowlisted (GPTBot, ClaudeBot, PerplexityBot, etc.)
+    sitemap.ts                  All static + dynamic routes
+    opengraph-image.tsx         Auto-generated OG for /
+    services/[slug]/page.tsx    All 7 service detail pages
+    about/, case-studies/, pricing/, contact/, privacy/, terms/
+  components/
+    header.tsx, footer.tsx, ui.tsx
+  lib/
+    site.ts                     SITE config, NAV, SERVICES data
+public/
+  llms.txt                      AEO/GEO crawl manifest (ChatGPT, Claude, Perplexity)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Branding
 
-## Learn More
+- Name: **Top G Studios**
+- Tagline: AI-Native Growth Engine for Modern Enterprises
+- Palette: bg `#050608`, accent `#00ff88` (neon green), text `#e8edf5`
+- Vibe: dark AI-enterprise, terminal/HUD details, scanlines, monospace eyebrows
 
-To learn more about Next.js, take a look at the following resources:
+Update everything in `src/lib/site.ts`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Three landing pillars
+1. **IT Development** — software shipped
+2. **IT Manpower Deployment** — embedded engineers/designers/leads
+3. **Digital Marketing Consulting** — enterprise SEO/AEO/GEO/paid/lifecycle
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Full service grid below covers: AEO+GEO, Enterprise SEO, Performance Marketing, LLM/AI Implementation.
 
-## Deploy on Vercel
+## AEO/GEO/SEO setup
+- `robots.ts` — explicitly allows GPTBot, ChatGPT-User, ClaudeBot, anthropic-ai, PerplexityBot, Google-Extended, Applebot-Extended, Amazonbot, Bytespider, Meta-ExternalAgent
+- `sitemap.ts` — every route, dynamic from `lib/site.ts`
+- `llms.txt` — full corpus summary served at `/llms.txt` for LLM ingestion
+- JSON-LD: Organization (sitewide), Service (per service page), FAQPage (homepage)
+- Metadata API: title templates, OG, Twitter, canonical URLs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploy to Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+cd ~/topg-studios
+git init && git add . && git commit -m "Initial Top G Studios site"
+# Create a new GitHub repo, then:
+git remote add origin git@github.com:<you>/topg-studios.git
+git push -u origin main
+# Then connect the repo on vercel.com and add your domain.
+```
+
+Set the production URL in `src/lib/site.ts` (currently `https://topgstudios.com`) before deploying.
+
+## Content TODO before launch
+- Real client logos and case study assets
+- Real metrics in case-studies
+- Actual booking calendar URL (currently Calendly placeholder)
+- Real founder bio + team photos on /about
+- Twitter / LinkedIn / Instagram handles in `SITE.socials`
+- Replace placeholder phone number in `SITE.phone`

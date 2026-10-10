@@ -143,3 +143,61 @@ html, body {
   font-size: 0.85rem;
   color: var(--color-fg);
 }
+
+/* Spaceship & Stealth Jet Flight Keyframes */
+@keyframes jet-idle-glow {
+  0%, 100% {
+    transform: scale(0.96);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 16px rgba(0, 255, 102, 0.6));
+  }
+}
+
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes thruster-pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(0, 255, 102, 0.25), inset 0 0 10px rgba(0, 255, 102, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(0, 255, 102, 0.6), inset 0 0 20px rgba(0, 255, 102, 0.35);
+  }
+}
+
+@keyframes hud-scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+/* HUD telemetry styling */
+.hud-border {
+  position: relative;
+}
+.hud-border::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid var(--color-accent);
+  border-left: 1px solid var(--color-accent);
+}
+.hud-border::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  border-bottom: 1px solid var(--color-accent);
+  border-right: 1px solid var(--color-accent);
+}
+

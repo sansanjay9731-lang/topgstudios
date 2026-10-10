@@ -12,6 +12,7 @@ import {
   MagneticButton,
   HoverLift,
   Tilt,
+  RadarSweepBackground,
 } from "@/components/motion";
 import { motion } from "motion/react";
 
@@ -126,6 +127,7 @@ export default function HomePage() {
     <>
       {/* HERO — Neon-style centered with ambient blobs + grid */}
       <section className="relative overflow-hidden pt-32 sm:pt-40 pb-20 sm:pb-28">
+        <RadarSweepBackground />
         <div className="bg-aura absolute inset-0 pointer-events-none" aria-hidden />
         <div className="bg-grid absolute inset-0 pointer-events-none" aria-hidden />
 

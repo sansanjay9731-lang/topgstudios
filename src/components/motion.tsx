@@ -19,11 +19,11 @@ import {
 type Direction = "up" | "down" | "left" | "right" | "none";
 
 const OFFSET: Record<Direction, { x: number; y: number }> = {
-  up: { x: 0, y: 24 },
-  down: { x: 0, y: -24 },
-  left: { x: 24, y: 0 },
-  right: { x: -24, y: 0 },
-  none: { x: 0, y: 0 },
+  up:    { x: 0,   y: 48 },
+  down:  { x: 0,   y: -48 },
+  left:  { x: 48,  y: 0 },
+  right: { x: -48, y: 0 },
+  none:  { x: 0,   y: 0 },
 };
 
 export function FadeIn({
@@ -309,3 +309,126 @@ export function Tilt({
     </motion.div>
   );
 }
+
+/* ─── Jet / Spaceship HUD Cursor Target Reticle ─────────────────────────────── */
+export function HUDCursorReticle() {
+  const mouseX = useMotionValue(-100);
+  const mouseY = useMotionValue(-100);
+  const smoothX = useSpring(mouseX, { stiffness: 450, damping: 32, mass: 0.2 });
+  const smoothY = useSpring(mouseY, { stiffness: 450, damping: 32, mass: 0.2 });
+
+  const [isLockedOn, setIsLockedOn] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const reduce = useReducedMotion();
+
+  useEffect(() => {
+    if (reduce || typeof window === "undefined") return;
+
+    // Only enable for desktop mice
+    const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
+    if (!hasFinePointer) return;
+
+    const onMouseMove = (e: MouseEvent) => {
+      mouseX.set(e.clientX);
+      mouseY.set(e.clientY);
+      if (!isVisible) setIsVisible(true);
+    };
+
+    const onMouseOver = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (!target) return;
+      const isInteractive = target.closest("a, button, [role='button'], input, textarea, select");
+      setIsLockedOn(!!isInteractive);
+    };
+
+    const onMouseLeave = () => {
+      setIsVisible(false);
+    };
+
+    window.addEventListener("mousemove", onMouseMove, { passive: true });
+    window.addEventListener("mouseover", onMouseOver, { passive: true });
+    document.addEventListener("mouseleave", onMouseLeave);
+
+    return () => {
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("mouseover", onMouseOver);
+      document.removeEventListener("mouseleave", onMouseLeave);
+    };
+  }, [mouseX, mouseY, isVisible, reduce]);
+
+  if (reduce || !isVisible) return null;
+
+  return (
+    <motion.div
+      className="pointer-events-none fixed top-0 left-0 z-[9999] will-change-transform"
+      style={{
+        x: smoothX,
+        y: smoothY,
+        transform: "translate(-50%, -50%)",
+      }}
+    >
+      {/* Center Laser Dot */}
+      <span className="block h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] shadow-[0_0_8px_var(--color-accent)] -translate-x-1/2 -translate-y-1/2" />
+
+      {/* Fighter Jet Targeting Reticle Brackets */}
+      <motion.div
+        className="absolute -top-4 -left-4 w-8 h-8 pointer-events-none"
+        animate={{
+          scale: isLockedOn ? 1.45 : 1,
+          rotate: isLockedOn ? 45 : 0,
+        }}
+        transition={{ type: "spring", stiffness: 350, damping: 24 }}
+      >
+        {/* Top-Left Bracket */}
+        <span className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-[var(--color-accent)] opacity-85" />
+        {/* Top-Right Bracket */}
+        <span className="absolute top-0 right-0 w-2 h-2 border-t-2 border-r-2 border-[var(--color-accent)] opacity-85" />
+        {/* Bottom-Left Bracket */}
+        <span className="absolute bottom-0 left-0 w-2 h-2 border-b-2 border-l-2 border-[var(--color-accent)] opacity-85" />
+        {/* Bottom-Right Bracket */}
+        <span className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-[var(--color-accent)] opacity-85" />
+      </motion.div>
+    </motion.div>
+  );
+}
+
+/* ─── Spaceship Cockpit Radar Sweep Background ─────────────────────────────── */
+export function RadarSweepBackground({ className = "" }: { className?: string }) {
+  const reduce = useReducedMotion();
+
+  return (
+    <div className={`absolute inset-0 pointer-events-none overflow-hidden ${className}`} aria-hidden>
+      {/* Concentric Range Rings */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full border border-[var(--color-accent)]/10">
+        <div className="absolute inset-[15%] rounded-full border border-[var(--color-accent)]/10" />
+        <div className="absolute inset-[32%] rounded-full border border-[var(--color-accent)]/15" />
+        <div className="absolute inset-[50%] rounded-full border border-[var(--color-accent)]/20" />
+        <div className="absolute inset-[70%] rounded-full border border-[var(--color-accent)]/25" />
+
+        {/* Crosshair Cardinal Grid Axes */}
+        <div className="absolute top-0 bottom-0 left-1/2 w-px bg-[var(--color-accent)]/10" />
+        <div className="absolute left-0 right-0 top-1/2 h-px bg-[var(--color-accent)]/10" />
+
+        {/* Rotating 360° Radar Beam */}
+        {!reduce && (
+          <div
+            className="absolute inset-0 rounded-full"
+            style={{
+              background: "conic-gradient(from 0deg at 50% 50%, rgba(0, 255, 102, 0.18) 0deg, rgba(0, 255, 102, 0.05) 45deg, transparent 90deg, transparent 360deg)",
+              animation: "radar-sweep 8s linear infinite",
+            }}
+          />
+        )}
+      </div>
+
+      {/* Subtle Aerospace Telemetry Markers */}
+      <div className="absolute top-8 left-8 font-mono text-[9px] uppercase tracking-[0.25em] text-[var(--color-accent)]/40 hidden sm:block">
+        RADAR: 360° // RNG: 120NM // MACH: 3.2
+      </div>
+      <div className="absolute top-8 right-8 font-mono text-[9px] uppercase tracking-[0.25em] text-[var(--color-accent)]/40 hidden sm:block">
+        STATUS: COMBAT-READY // VECTOR: ACTIVE
+      </div>
+    </div>
+  );
+}
+

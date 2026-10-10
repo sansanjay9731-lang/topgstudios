@@ -42,7 +42,7 @@ export function Header() {
     >
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-6 lg:px-10">
         <div className="flex items-center gap-10">
-          <TopGunLogo variant="full" size="md" href="/" />
+          <TopGunLogo variant="full" size="md" href="/" animate />
 
           <nav className="hidden lg:flex items-center gap-1">
             <MegaItem label="Services" name="services" open={open} setOpen={setOpen} items={MEGA_PRODUCT} />

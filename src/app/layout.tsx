@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { HUDCursorReticle } from "@/components/motion";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 
@@ -91,6 +92,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         className="min-h-dvh flex flex-col font-sans bg-[var(--color-bg)]"
         suppressHydrationWarning
       >
+        <HUDCursorReticle />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

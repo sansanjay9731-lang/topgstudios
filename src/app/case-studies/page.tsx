@@ -5,7 +5,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Case studies",
   description:
-    "Selected work from Top G Studios — IT development, embedded engineering and AI search visibility programs for modern enterprises.",
+    "Selected work from Top Gun Studios — IT development, embedded engineering and AI search visibility programs for modern enterprises.",
   alternates: { canonical: `${SITE.url}/case-studies` },
 };
 

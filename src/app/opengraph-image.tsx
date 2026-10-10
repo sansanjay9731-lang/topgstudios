@@ -13,8 +13,8 @@ export default async function OG() {
         style={{
           width: "100%",
           height: "100%",
-          background: "#050608",
-          color: "#e8edf5",
+          background: "#0a0a0a",
+          color: "#f2f2f2",
           padding: 80,
           display: "flex",
           flexDirection: "column",
@@ -29,7 +29,7 @@ export default async function OG() {
               height: 56,
               border: "1px solid #262d3d",
               background: "#0b0d12",
-              color: "#00ff88",
+              color: "#00ff66",
               fontFamily: "monospace",
               fontWeight: 700,
               fontSize: 18,
@@ -50,7 +50,7 @@ export default async function OG() {
               fontSize: 16,
               textTransform: "uppercase",
               letterSpacing: 4,
-              color: "#00ff88",
+              color: "#00ff66",
             }}
           >
             AI-NATIVE GROWTH ENGINE
@@ -58,7 +58,7 @@ export default async function OG() {
           <div style={{ fontSize: 76, lineHeight: 1.05, fontWeight: 500, letterSpacing: -2 }}>
             Build. Deploy.
             <br />
-            <span style={{ color: "#00ff88" }}>Get found by AI.</span>
+            <span style={{ color: "#00ff66" }}>Get found by AI.</span>
           </div>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", color: "#8b94a7", fontSize: 18 }}>

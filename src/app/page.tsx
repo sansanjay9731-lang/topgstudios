@@ -14,6 +14,8 @@ import {
   Tilt,
 } from "@/components/motion";
 import { motion } from "motion/react";
+import { BrandShowcase } from "@/components/brand-showcase";
+import { StealthJetSvg } from "@/components/logo";
 
 const PILLARS = [
   {
@@ -78,8 +80,8 @@ const PROCESS = [
 
 const FAQ = [
   {
-    q: "What does Top G Studios actually do?",
-    a: "We are a three-arm AI-native agency. We build software (IT development), embed engineers in your team (IT manpower deployment), and run enterprise-grade digital marketing across SEO, AEO, GEO, performance and lifecycle.",
+    q: "What does Top Gun Studios actually do?",
+    a: "Top Gun Studios is a three-arm AI-native engineering and growth powerhouse. We build production software (IT development), embed elite engineers in your team (IT manpower deployment), and run enterprise-grade digital marketing across AEO, GEO, SEO, performance media, and lifecycle.",
   },
   {
     q: "What is AEO and GEO and why do they matter?",
@@ -114,6 +116,7 @@ const faqSchema = {
 };
 
 const ANCHORS = [
+  { label: "Identity", href: "#brand-system" },
   { label: "Pillars", href: "#pillars" },
   { label: "AI Search", href: "#ai-search" },
   { label: "Services", href: "#services" },
@@ -144,15 +147,41 @@ export default function HomePage() {
               className="inline-flex items-center gap-2 rounded-full border border-[var(--color-line-strong)] bg-[var(--color-bg-elev)]/80 px-3 py-1 font-mono text-[11px] text-[var(--color-fg-muted)] hover:border-[var(--color-accent)] hover:text-[var(--color-fg)] transition-colors backdrop-blur"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-accent)] pulse-dot" />
-              SYSTEM ONLINE · BOOK A 30-MIN CALL
+              TOP GUN STUDIOS · AEROSPACE-GRADE DEV & AI VISIBILITY
               <span className="text-[var(--color-accent)]">→</span>
             </a>
+          </motion.div>
+
+          {/* New Stealth Jet Radar Icon Centerpiece */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-10 flex flex-col items-center justify-center"
+          >
+            <div className="relative h-28 w-28 sm:h-36 sm:w-36 flex items-center justify-center">
+              <div className="absolute inset-0 rounded-full bg-[var(--color-accent)]/15 blur-2xl animate-pulse" />
+              <StealthJetSvg showRing={true} glow={true} className="w-full h-full drop-shadow-[0_0_35px_rgba(0,255,102,0.45)]" />
+            </div>
+
+            {/* Core Tenets Micro-Banner */}
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 font-mono text-[10px] sm:text-xs tracking-[0.28em] text-[var(--color-fg-muted)] uppercase">
+              <span className="text-white font-medium">SPEED</span>
+              <span className="text-[var(--color-accent)]">·</span>
+              <span className="text-white font-medium">PRECISION</span>
+              <span className="text-[var(--color-accent)]">·</span>
+              <span className="text-white font-medium">GROWTH</span>
+              <span className="text-[var(--color-accent)]">·</span>
+              <span className="text-white font-medium">PERFORMANCE</span>
+              <span className="text-[var(--color-accent)]">·</span>
+              <span className="text-white font-medium">INNOVATION</span>
+            </div>
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
             className="mt-8 text-center font-[var(--font-display)] text-5xl sm:text-7xl lg:text-[88px] font-medium tracking-tight leading-[0.98]"
           >
             The AI-native
@@ -163,11 +192,11 @@ export default function HomePage() {
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
+            transition={{ duration: 0.7, delay: 0.35 }}
             className="mx-auto mt-8 max-w-2xl text-center text-lg sm:text-xl leading-relaxed text-[var(--color-fg-muted)]"
           >
-            Ship enterprise software. Embed elite engineers. Get cited on ChatGPT, Claude,
-            Perplexity, Gemini and Google. Three operating arms, one accountable team.
+            Top Gun Studios delivers full-stack production software, elite embedded engineering pods,
+            and high-velocity AI search optimization (AEO/GEO) to dominate ChatGPT, Claude, Perplexity, and Google.
           </motion.p>
 
           <motion.div
@@ -182,8 +211,8 @@ export default function HomePage() {
               </Button>
             </MagneticButton>
             <MagneticButton>
-              <Button href="/pricing" variant="outline" size="lg">
-                See pricing
+              <Button href="#brand-system" variant="outline" size="lg">
+                View Brand System
               </Button>
             </MagneticButton>
           </motion.div>
@@ -198,7 +227,7 @@ export default function HomePage() {
             <div className="cli-pill">
               <span className="text-[var(--color-accent)]">$</span>
               <span className="text-[var(--color-fg-muted)]">npx</span>
-              <span>topg deploy --enterprise</span>
+              <span>topgun deploy --enterprise</span>
               <span className="caret">▍</span>
             </div>
           </motion.div>
@@ -234,6 +263,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* BRAND & IDENTITY ARCHITECTURE SECTION */}
+      <BrandShowcase />
 
       {/* THREE PILLARS — alternating feature rows, Neon-style */}
       <section id="pillars" className="relative py-24 sm:py-32">

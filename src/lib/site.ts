@@ -1,12 +1,25 @@
 export const SITE = {
-  name: "Top G Studios",
-  shortName: "Top G",
-  tagline: "AI-Native Growth Engine for Modern Enterprises",
+  name: "Top Gun Studios",
+  shortName: "Top Gun",
+  altName: "Top G Studios",
+  tagline: "AI-Native Growth Engine & Elite Engineering Studio",
   description:
-    "Top G Studios is an AI-native digital agency. We ship enterprise software, embed elite IT talent, and run AEO, GEO, SEO and performance marketing programs that get businesses cited on ChatGPT, Claude, Perplexity, Gemini and Google.",
+    "Top Gun Studios is an AI-native engineering and growth powerhouse. We ship production software, deploy elite embedded technical talent, and run high-velocity AEO, GEO, and search visibility programs that dominate ChatGPT, Claude, Perplexity, Gemini, and Google.",
   url: "https://topgstudios.com",
   email: "sanjay@topgstudio.com",
   bookingUrl: "https://calendly.com/sansanjay9731/imagineus-x-discovery-call-clone",
+  brandValues: [
+    { label: "SPEED", desc: "Rapid deployment cycles, instantaneous iteration, zero drag." },
+    { label: "PRECISION", desc: "Production-grade code architecture and deterministic execution." },
+    { label: "GROWTH", desc: "Exponential search citations, organic compounding, and scalable pipeline." },
+    { label: "PERFORMANCE", desc: "Sub-second load times, 60fps animations, optimized ROAS." },
+    { label: "INNOVATION", desc: "AI-native agents, custom RAG systems, and next-gen search engineering." },
+  ],
+  brandColors: {
+    accentGreen: "#00FF66",
+    deepBlack: "#0A0A0A",
+    cleanWhite: "#F2F2F2",
+  },
   phone: "+1 (000) 000-0000",
   address: "United States · Serving US-based teams",
   keywords: [

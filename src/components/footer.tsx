@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { SERVICES, SITE } from "@/lib/site";
 import { Button } from "./ui";
+import { TopGunLogo } from "./logo";
 
 const TRUST = [
   "SOC 2 ready",
@@ -62,36 +63,7 @@ export function Footer() {
       <div className="relative mx-auto w-full max-w-7xl px-6 lg:px-10 pb-12">
         <div className="grid gap-12 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 group">
-              <div className="flex items-center gap-4">
-                {/* Custom Precision SVG Stealth Jet - Pointy Face Up */}
-                <div className="relative h-10 w-10 flex items-center justify-center text-[var(--color-accent)] drop-shadow-[0_0_10px_rgba(34,197,94,0.4)]">
-                  <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Main Fuselage Spine */}
-                  <path d="M50 5L58 40L50 85L42 40L50 5Z" fill="currentColor" fillOpacity="0.9" />
-                  {/* Outer Stealth Wings */}
-                  <path d="M58 35L95 85L62 75L58 35Z" fill="currentColor" fillOpacity="0.7" />
-                  <path d="M42 35L5 85L38 75L42 35Z" fill="currentColor" fillOpacity="0.7" />
-                  {/* Secondary Inner Stabilizers */}
-                  <path d="M50 45L62 65L50 85L38 65L50 45Z" fill="currentColor" fillOpacity="0.8" />
-                  {/* Rear Tail Fins */}
-                  <path d="M62 70L85 95L68 85L62 70Z" fill="currentColor" fillOpacity="0.75" />
-                  <path d="M38 70L15 95L32 85L38 70Z" fill="currentColor" fillOpacity="0.75" />
-                  {/* High-Tech Canopy Accent */}
-                  <path d="M50 15L54 35L50 42L46 35L50 15Z" fill="#000" fillOpacity="0.4" />
-                  </svg>
-                </div>
-                {/* Professional Text Wordmark */}
-                <div className="flex flex-col -gap-1">
-                  <span className="font-[var(--font-display)] text-2xl font-bold tracking-tighter uppercase text-white leading-none">
-                    TOP G
-                  </span>
-                  <span className="font-[var(--font-display)] text-[10px] font-medium tracking-[0.3em] uppercase text-[var(--color-accent)] leading-none opacity-100">
-                    STUDIOS
-                  </span>
-                </div>
-              </div>
-            </div>
+            <TopGunLogo variant="full" size="md" href="/" />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-[var(--color-fg-muted)]">
               {SITE.description}
             </p>

@@ -41,13 +41,13 @@ export function StealthJetSvg({
         </filter>
 
         {/* ── chrome metallic gradients ── */}
-        {/* top blade – left lit face */}
+        {/* top blade - left lit face */}
         <linearGradient id="tbl" x1="97" y1="10" x2="94" y2="74" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stopColor="#E4E4E7" />
           <stop offset="60%" stopColor="#71717A" />
           <stop offset="100%" stopColor="#27272A" />
         </linearGradient>
-        {/* top blade – right shadow face */}
+        {/* top blade - right shadow face */}
         <linearGradient id="tbr" x1="103" y1="10" x2="106" y2="74" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stopColor="#A1A1AA" />
           <stop offset="60%" stopColor="#52525B" />
@@ -62,17 +62,17 @@ export function StealthJetSvg({
           <stop offset="0%" stopColor="#3F3F46" />
           <stop offset="100%" stopColor="#18181B" />
         </linearGradient>
-        {/* left wing – upper lit face */}
+        {/* left wing - upper lit face */}
         <linearGradient id="lwu" x1="82" y1="90" x2="10" y2="100" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stopColor="#71717A" />
           <stop offset="100%" stopColor="#27272A" />
         </linearGradient>
-        {/* left wing – lower shadow face */}
+        {/* left wing - lower shadow face */}
         <linearGradient id="lwl" x1="82" y1="110" x2="10" y2="100" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stopColor="#3F3F46" />
           <stop offset="100%" stopColor="#18181B" />
         </linearGradient>
-        {/* left wing – inner chrome chine */}
+        {/* left wing - inner chrome chine */}
         <linearGradient id="lwc" x1="82" y1="90" x2="68" y2="100" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stopColor="#A1A1AA" />
           <stop offset="100%" stopColor="#52525B" />
@@ -201,15 +201,13 @@ export function TopGunWordmark({
       >
         TOP GUN
       </span>
-      <div className={`flex items-center gap-1.5 ${sz.gap}`}>
-        <span className={`h-px ${sz.dash}`} style={{ background: accent, opacity: 0.6 }} />
+      <div className={`flex items-center ${sz.gap}`}>
         <span
           className={`font-[var(--font-display)] font-semibold uppercase leading-none ${sz.sub}`}
-          style={{ color: accent, letterSpacing: "0.32em" }}
+          style={{ color: accent, letterSpacing: "0.36em" }}
         >
           STUDIOS
         </span>
-        <span className={`h-px ${sz.dash}`} style={{ background: accent, opacity: 0.6 }} />
       </div>
     </div>
   );
@@ -231,7 +229,7 @@ export function TopGunLogo({
     xl:  { jet: "w-24 h-24", ring: "w-28 h-28",  gap: "gap-6"   },
   }[size];
 
-  /* Jet mark spring entrance – drops in from above on first render */
+  /* Jet mark spring entrance - drops in from above on first render */
   const jetVariants: Variants = {
     hidden: { opacity: 0, y: animate ? -32 : 0, scale: animate ? 0.7 : 1 },
     visible: {

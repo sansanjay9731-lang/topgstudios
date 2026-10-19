@@ -21,7 +21,7 @@ export default function PrivacyPage() {
           </p>
           <h2 className="text-[var(--color-fg)] text-xl mt-8">Information we collect</h2>
           <p>
-            We collect information you provide when you contact us, book a call, or send a brief — name,
+            We collect information you provide when you contact us, book a call, or send a brief: name,
             email, company, and the content of your message.
           </p>
           <h2 className="text-[var(--color-fg)] text-xl mt-8">How we use it</h2>

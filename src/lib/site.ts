@@ -107,7 +107,7 @@ export const SERVICES = [
     title: "AEO + GEO (AI Search Visibility)",
     short: "Get cited on ChatGPT, Claude, Perplexity, Gemini, AI Overviews.",
     description:
-      "Answer Engine Optimization and Generative Engine Optimization. We engineer your content, schema and authority signals so AI engines quote your brand as the answer — not your competitors.",
+      "Answer Engine Optimization and Generative Engine Optimization. We engineer your content, schema and authority signals so AI engines quote your brand as the answer, not your competitors.",
     deliverables: [
       "AI visibility audit across ChatGPT, Claude, Perplexity, Gemini, Copilot",
       "llms.txt + robots.txt + AI crawler access",
@@ -139,7 +139,7 @@ export const SERVICES = [
     title: "Performance Marketing",
     short: "Meta, Google, LinkedIn ads engineered for ROAS.",
     description:
-      "Full-funnel paid media programs. We build creative, run the ads, manage spend, and report on revenue — not vanity metrics.",
+      "Full-funnel paid media programs. We build creative, run the ads, manage spend, and report on revenue, not vanity metrics.",
     deliverables: [
       "Meta Ads (Facebook, Instagram, Messenger)",
       "Google Ads (Search, Performance Max, YouTube)",

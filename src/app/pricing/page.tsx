@@ -3,7 +3,7 @@ import { Button, Container, Eyebrow, H2, Lead, Section } from "@/components/ui";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Pricing — US Market",
+  title: "Pricing | US Market",
   description:
     "Transparent USD pricing for IT development, embedded engineering and digital marketing programs at Top Gun Studios. Built for US-based teams.",
   alternates: { canonical: `${SITE.url}/pricing` },

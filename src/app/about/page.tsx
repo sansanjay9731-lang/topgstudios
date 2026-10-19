@@ -15,7 +15,7 @@ const VALUES = [
   },
   {
     title: "AI-native by default.",
-    body: "We build with LLMs in the loop — for our clients and for ourselves. Faster iterations, better content, smarter ops.",
+    body: "We build with LLMs in the loop, for our clients and for ourselves. Faster iterations, better content, smarter ops.",
   },
   {
     title: "Compound, don't churn.",
@@ -23,7 +23,7 @@ const VALUES = [
   },
   {
     title: "Outcomes on the line.",
-    body: "Every retainer ties to a measurable outcome — rankings, ROAS, qualified pipeline, AI citations, ships shipped.",
+    body: "Every retainer ties to a measurable outcome: rankings, ROAS, qualified pipeline, AI citations, ships shipped.",
   },
 ];
 
@@ -40,7 +40,7 @@ export default function AboutPage() {
           </h1>
           <Lead className="mt-7">
             {SITE.name} was built on a simple thesis: software, talent and marketing have collapsed
-            into a single function — and the buyers, channels and engines are all changing at once.
+            into a single function, and the buyers, channels and engines are all changing at once.
             One operator. One stack. Three arms. Built to compound.
           </Lead>
         </Container>

@@ -17,7 +17,7 @@ export function Footer() {
     <footer className="relative border-t border-[var(--color-line)] bg-[var(--color-bg)]">
       <div className="bg-aura-soft absolute inset-0 pointer-events-none" />
 
-      {/* Repeated CTA block — Neon-style */}
+      {/* Repeated CTA block */}
       <div className="relative mx-auto w-full max-w-7xl px-6 lg:px-10 pt-24 pb-16">
         <div className="relative overflow-hidden rounded-3xl border border-[var(--color-line-strong)] bg-[var(--color-bg-elev)] px-8 py-16 sm:px-16 sm:py-20">
           <div className="bg-aura absolute inset-0 opacity-60" />

@@ -31,7 +31,7 @@ const PILLARS = [
   {
     code: "02",
     title: "IT Manpower Deployment",
-    body: "Elite vetted engineers, designers and tech leads embedded in your team — onshore or offshore.",
+    body: "Elite vetted engineers, designers and tech leads embedded in your team, onshore or offshore.",
     href: "/services/it-manpower",
     bullets: [
       "Senior full-stack and platform engineers",
@@ -63,7 +63,7 @@ const PROCESS = [
   {
     step: "02",
     title: "Architect",
-    body: "A 90-day roadmap with the right mix of build, deploy-talent and run-marketing. No bloated retainer — we ship what moves revenue.",
+    body: "A 90-day roadmap with the right mix of build, deploy-talent and run-marketing. No bloated retainer: we ship what moves revenue.",
   },
   {
     step: "03",
@@ -84,11 +84,11 @@ const FAQ = [
   },
   {
     q: "What is AEO and GEO and why do they matter?",
-    a: "AEO is Answer Engine Optimization — getting your brand cited inside answers from ChatGPT, Claude, Perplexity and Gemini. GEO is Generative Engine Optimization — winning visibility inside Google's AI Overviews and similar generative search experiences. Together, they are how modern buyers discover vendors. Traditional SEO is no longer enough.",
+    a: "AEO is Answer Engine Optimization: getting your brand cited inside answers from ChatGPT, Claude, Perplexity and Gemini. GEO is Generative Engine Optimization: winning visibility inside Google's AI Overviews and similar generative search experiences. Together, they are how modern buyers discover vendors. Traditional SEO is no longer enough.",
   },
   {
     q: "How is IT manpower deployment different from a typical staffing firm?",
-    a: "We vet for senior engineers, designers and tech leads who have shipped real production systems. We don't bill bodies — we deploy operators who can lead initiatives. Engagements are typically 3 to 12 months, embedded inside your team and tooling.",
+    a: "We vet for senior engineers, designers and tech leads who have shipped real production systems. We don't bill bodies; we deploy operators who can lead initiatives. Engagements are typically 3 to 12 months, embedded inside your team and tooling.",
   },
   {
     q: "Do you work with startups or only enterprises?",
@@ -125,7 +125,7 @@ const ANCHORS = [
 export default function HomePage() {
   return (
     <>
-      {/* HERO — Neon-style centered with ambient blobs + grid */}
+      {/* HERO: Cockpit Radar and Centered Ambience */}
       <section className="relative overflow-hidden pt-32 sm:pt-40 pb-20 sm:pb-28">
         <RadarSweepBackground />
         <div className="bg-aura absolute inset-0 pointer-events-none" aria-hidden />
@@ -205,7 +205,7 @@ export default function HomePage() {
             </div>
           </motion.div>
 
-          {/* Anchor strip — Neon-style in-page nav */}
+          {/* Anchor strip: in-page nav */}
           <motion.nav
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -238,7 +238,7 @@ export default function HomePage() {
       </section>
 
 
-      {/* THREE PILLARS — alternating feature rows, Neon-style */}
+      {/* THREE PILLARS: alternating feature rows */}
       <section id="pillars" className="relative py-24 sm:py-32">
         <Container>
           <FadeIn className="max-w-3xl">
@@ -247,7 +247,7 @@ export default function HomePage() {
               Build. Deploy. <span className="text-[var(--color-fg-muted)]">Get found.</span>
             </H2>
             <Lead className="mt-6">
-              Most agencies sell one thing. We sell the entire growth motion — engineering, talent,
+              Most agencies sell one thing. We sell the entire growth motion: engineering, talent,
               and AI-search visibility under one roof, on one P&L, with one accountable team.
             </Lead>
           </FadeIn>
@@ -294,7 +294,7 @@ export default function HomePage() {
                   </div>
                 </FadeIn>
 
-                {/* Illustration — Neon-style mock console */}
+                {/* Illustration: mock console */}
                 <FadeIn
                   direction={i % 2 === 1 ? "left" : "right"}
                   delay={0.15}
@@ -492,7 +492,7 @@ export default function HomePage() {
               <Eyebrow>Common questions</Eyebrow>
               <H2 className="mt-6">FAQ</H2>
               <p className="mt-6 text-[var(--color-fg-muted)]">
-                Still curious? Ask anything in a 30-min call —{" "}
+                Still curious? Ask anything in a 30-min call:{" "}
                 <a
                   href={SITE.bookingUrl}
                   target="_blank"
@@ -628,7 +628,7 @@ function PillarMock({ code, title }: { code: string; title: string }) {
           ))}
         </div>
         <p className="mt-4 font-mono text-[11px] text-[var(--color-fg-dim)]">
-          // {title} — 4 of 5 active
+          // {title}: 4 of 5 active
         </p>
       </div>
     );

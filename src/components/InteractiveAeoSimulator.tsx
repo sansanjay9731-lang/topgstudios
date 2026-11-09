@@ -121,8 +121,8 @@ export function InteractiveAeoSimulator() {
             <span className="h-3 w-3 rounded-full bg-yellow-500/70" />
             <span className="h-3 w-3 rounded-full bg-emerald-500/70" />
           </div>
-          <span className="font-mono text-xs font-medium tracking-[0.2em] text-emerald-400">
-            AEO.RUNTIME.SIMULATOR // PRODUCT & SERVICE ENGINE
+          <span className="font-mono text-[11px] sm:text-xs font-medium tracking-wider sm:tracking-[0.2em] text-emerald-400 truncate">
+            AEO.RUNTIME.SIMULATOR <span className="hidden sm:inline">// PRODUCT & SERVICE ENGINE</span>
           </span>
         </div>
 

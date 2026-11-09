@@ -255,7 +255,7 @@ export function CapabilityMatrix() {
               under one rigorous engineering standard.
             </p>
           </div>
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0 w-full sm:w-auto">
             <Button href="/pricing" variant="outline">
               View Pricing Models
             </Button>
@@ -266,7 +266,7 @@ export function CapabilityMatrix() {
         </FadeIn>
 
         {/* Filter Switcher Tabs */}
-        <FadeIn delay={0.1} className="mt-8 flex flex-wrap items-center gap-2">
+        <FadeIn delay={0.1} className="mt-8 flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none sm:flex-wrap">
           {CATEGORIES.map((cat) => {
             const isActive = activeTab === cat.id;
             return (
@@ -474,7 +474,7 @@ function CapabilityCard({
       </div>
 
       {/* Bottom CTA row */}
-      <div className="mt-6 flex items-center justify-between text-xs font-mono pt-4 border-t border-white/[0.04]">
+      <div className="mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs font-mono pt-4 border-t border-white/[0.04]">
         <span className="text-neutral-500">Route: /services/{item.slug}</span>
         <span className="text-emerald-400 group-hover:underline flex items-center gap-1">
           Explore Capability Details →

@@ -79,9 +79,14 @@ export const SITE = {
   ],
   socials: [
     "https://twitter.com/topgstudios",
-    "https://www.linkedin.com/company/topgstudios",
-    "https://www.instagram.com/topgstudios",
+    "https://www.linkedin.com/company/topgunstudios",
+    "https://www.instagram.com/topgunstudio/",
   ],
+  companySocials: {
+    linkedin: "https://www.linkedin.com/company/topgunstudios",
+    instagram: "https://www.instagram.com/topgunstudio/",
+    twitter: "https://twitter.com/topgstudios",
+  },
 } as const;
 
 export const NAV = [

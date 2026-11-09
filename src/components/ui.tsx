@@ -55,6 +55,7 @@ type ButtonProps = {
   size?: "md" | "lg";
   className?: string;
   external?: boolean;
+  onClick?: () => void;
 };
 
 export function Button({
@@ -64,6 +65,7 @@ export function Button({
   size = "md",
   className = "",
   external,
+  onClick,
 }: ButtonProps) {
   const sizeCls = size === "lg" ? "h-14 px-7 text-base" : "h-11 px-5 text-sm";
   const base =
@@ -79,18 +81,18 @@ export function Button({
   if (href) {
     if (external) {
       return (
-        <a href={href} target="_blank" rel="noopener noreferrer" className={cls}>
+        <a href={href} target="_blank" rel="noopener noreferrer" onClick={onClick} className={cls}>
           {children}
         </a>
       );
     }
     return (
-      <Link href={href} className={cls}>
+      <Link href={href} onClick={onClick} className={cls}>
         {children}
       </Link>
     );
   }
-  return <button className={cls}>{children}</button>;
+  return <button onClick={onClick} className={cls}>{children}</button>;
 }
 
 export function Card({ children, className = "" }: { children: ReactNode; className?: string }) {

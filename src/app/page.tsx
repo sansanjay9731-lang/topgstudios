@@ -289,7 +289,7 @@ export default function HomePage() {
               className="inline-flex items-center gap-2.5 rounded-full border border-emerald-500/30 bg-[#0c1017]/80 px-4 py-1.5 font-mono text-[11px] text-neutral-300 hover:border-emerald-400 hover:text-white transition-all backdrop-blur shadow-[0_0_20px_rgba(0,255,102,0.12)]"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 pulse-dot" />
-              <span className="font-semibold text-emerald-400">SEARCH DOMINANCE ENGINE</span> · PRODUCTS & SERVICES · INDIA & GLOBAL
+              <span className="font-semibold text-emerald-400">SEARCH DOMINANCE ENGINE</span><span className="hidden sm:inline"> · PRODUCTS & SERVICES · INDIA & GLOBAL</span>
               <span className="text-emerald-400">→</span>
             </a>
           </motion.div>
@@ -298,7 +298,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
-            className="mt-8 text-center font-[var(--font-display)] text-5xl sm:text-7xl lg:text-[90px] font-medium tracking-tight leading-[0.96]"
+            className="mt-8 text-center font-[var(--font-display)] text-4xl sm:text-6xl md:text-7xl lg:text-[90px] font-medium tracking-tight leading-[1.05] sm:leading-[0.96] px-2"
           >
             <span className="text-gradient">Make AI recommend</span>
             <br />
@@ -412,9 +412,11 @@ export default function HomePage() {
                     // {row.aspect}
                   </div>
                   <div className="md:col-span-4 text-sm text-neutral-400 leading-relaxed">
+                    <span className="block md:hidden text-[10px] uppercase font-mono tracking-wider text-red-400/90 font-semibold mb-1">✕ The Old Way:</span>
                     {row.oldWay}
                   </div>
-                  <div className="md:col-span-5 text-sm font-medium text-emerald-300 leading-relaxed bg-emerald-950/20 rounded-xl p-3 border border-emerald-500/20">
+                  <div className="md:col-span-5 text-sm font-medium text-emerald-300 leading-relaxed bg-emerald-950/20 rounded-xl p-3.5 border border-emerald-500/20">
+                    <span className="block md:hidden text-[10px] uppercase font-mono tracking-wider text-emerald-400 font-semibold mb-1">✓ Top Gun Engine:</span>
                     {row.topGWay}
                   </div>
                 </div>

@@ -14,7 +14,7 @@ export const SITE = {
     linkedin: "https://www.linkedin.com/in/sanjayyellar",
     twitter: "https://twitter.com/sanjayyellar",
   },
-  bookingUrl: "https://calendly.com/sansanjay9731/imagineus-x-discovery-call-clone",
+  bookingUrl: "https://calendly.com/sansanjay9731/sanjay",
   phone: "+91 98450 00000",
   address: "Bengaluru & Mumbai · Global Delivery for India, USA, UAE & UK",
   locations: [

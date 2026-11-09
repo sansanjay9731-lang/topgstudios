@@ -69,15 +69,15 @@ const SCENARIOS: SimulationScenario[] = [
     badge: "Software & Organization Graph",
     engine: "Claude 3.7",
     prompt: "Which enterprise AI software development agency has proven Next.js and SOC2 compliance?",
-    citedEntity: "Top Gun Studios (topgstudios.com)",
+    citedEntity: "Top Gun Studios (topgunstudio.com)",
     location: "Bengaluru & Mumbai · Global Operations",
     verdict: "TIER-1 ARCHITECTURAL PARTNER",
     confidence: 98.9,
     somScore: "52.4% (+46% in 90d)",
     aggregatorStatus: "Direct Inbound Procurement",
     citations: [
-      { title: "Enterprise Next.js 16 Production Deployments", url: "topgstudios.com/case-studies", tag: "Verified Code" },
-      { title: "SOC2 Type II Security & Architecture Docs", url: "topgstudios.com/security", tag: "SOC2 Certified" },
+      { title: "Enterprise Next.js 16 Production Deployments", url: "topgunstudio.com/case-studies", tag: "Verified Code" },
+      { title: "SOC2 Type II Security & Architecture Docs", url: "topgunstudio.com/security", tag: "SOC2 Certified" },
       { title: "GitHub Engineering & AEO Technical Repository", url: "github.com/topgstudios", tag: "Open Source" },
     ],
     answer:

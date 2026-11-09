@@ -63,7 +63,7 @@ export default async function OG() {
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", color: "#8b94a7", fontSize: 18 }}>
           <div>IT Development · Manpower · Digital Marketing</div>
-          <div>topgstudios.com</div>
+          <div>topgunstudio.com</div>
         </div>
       </div>
     ),

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <canvas id="canvas"></canvas>
+  <script>
+    const img = new Image();
+    img.src = '/logo.png';
+    img.onload = () => {
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d');
+      
+      // The jet is in the top center of the 1024x1024 image
+      // Let's crop a 500x500 area from the top center
+      canvas.width = 500;
+      canvas.height = 500;
+      
+      ctx.drawImage(img, 262, 100, 500, 500, 0, 0, 500, 500);
+      
+      // Add a hidden element to signal completion
+      const done = document.createElement('div');
+      done.id = 'done';
+      document.body.appendChild(done);
+    };
+  </script>
+</body>
+</html>

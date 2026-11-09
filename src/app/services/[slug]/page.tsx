@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: svc.description,
     alternates: { canonical: `${SITE.url}/services/${svc.slug}` },
     openGraph: {
-      title: `${svc.title} — ${SITE.name}`,
+      title: `${svc.title} | ${SITE.name}`,
       description: svc.description,
       url: `${SITE.url}/services/${svc.slug}`,
     },

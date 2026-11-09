@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+<<<<<<< HEAD
   --color-bg: #07080a;
   --color-bg-deep: #030406;
   --color-bg-elev: #0c0e12;
@@ -16,6 +17,23 @@
   --color-accent-glow: rgba(0, 229, 153, 0.28);
   --color-violet: #a78bfa;
   --color-cyan: #22d3ee;
+=======
+  --color-bg: #0a0a0a;
+  --color-bg-deep: #050505;
+  --color-bg-elev: #121316;
+  --color-bg-card: #15171c;
+  --color-line: #1f2229;
+  --color-line-strong: #2a2f3a;
+  --color-fg: #f2f2f2;
+  --color-fg-muted: #9ca3af;
+  --color-fg-dim: #5c6370;
+  --color-accent: #00ff66;
+  --color-accent-bright: #33ff85;
+  --color-accent-dim: #00cc52;
+  --color-accent-glow: rgba(0, 255, 102, 0.28);
+  --color-violet: #8b5cf6;
+  --color-cyan: #06b6d4;
+>>>>>>> origin/main
 
   --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-mono), ui-monospace, "JetBrains Mono", monospace;
@@ -178,3 +196,61 @@ html, body {
   0% { transform: scale(0.6); opacity: 0.8; }
   100% { transform: scale(1.6); opacity: 0; }
 }
+
+/* Spaceship & Stealth Jet Flight Keyframes */
+@keyframes jet-idle-glow {
+  0%, 100% {
+    transform: scale(0.96);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 16px rgba(0, 255, 102, 0.6));
+  }
+}
+
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes thruster-pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(0, 255, 102, 0.25), inset 0 0 10px rgba(0, 255, 102, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(0, 255, 102, 0.6), inset 0 0 20px rgba(0, 255, 102, 0.35);
+  }
+}
+
+@keyframes hud-scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+/* HUD telemetry styling */
+.hud-border {
+  position: relative;
+}
+.hud-border::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-top: 1px solid var(--color-accent);
+  border-left: 1px solid var(--color-accent);
+}
+.hud-border::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  border-bottom: 1px solid var(--color-accent);
+  border-right: 1px solid var(--color-accent);
+}
+

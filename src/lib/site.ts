@@ -22,6 +22,18 @@ export const SITE = {
     { city: "New York", country: "United States", role: "US Partner & Client Operations" },
     { city: "Dubai", country: "United Arab Emirates", role: "Middle East Advisory" },
   ],
+  brandValues: [
+    { label: "SPEED", desc: "Rapid deployment cycles, instantaneous iteration, zero drag." },
+    { label: "PRECISION", desc: "Production-grade code architecture and deterministic execution." },
+    { label: "GROWTH", desc: "Exponential search citations, organic compounding, and scalable pipeline." },
+    { label: "PERFORMANCE", desc: "Sub-second load times, 60fps animations, optimized ROAS." },
+    { label: "INNOVATION", desc: "AI-native agents, custom RAG systems, and next-gen search engineering." },
+  ],
+  brandColors: {
+    accentGreen: "#00FF66",
+    deepBlack: "#07080A",
+    cleanWhite: "#F8FAFC",
+  },
   keywords: [
     "AEO agency India",
     "GEO agency India",
@@ -72,10 +84,11 @@ export const SITE = {
 } as const;
 
 export const NAV = [
+  { label: "Simulator", href: "/#simulator" },
   { label: "Pillars", href: "/#pillars" },
-  { label: "AI Search (AEO/GEO)", href: "/services/aeo-geo" },
+  { label: "AI Search", href: "/services/aeo-geo" },
   { label: "Target Niches", href: "/#niches" },
-  { label: "The Journey", href: "/#journey" },
+  { label: "Journey", href: "/#journey" },
   { label: "Work", href: "/case-studies" },
   { label: "Pricing", href: "/pricing" },
   { label: "About", href: "/about" },
@@ -135,7 +148,7 @@ export const SERVICES = [
     title: "AEO + GEO (AI Search Visibility)",
     short: "Get cited on ChatGPT, Claude, Perplexity, Gemini, AI Overviews.",
     description:
-      "Answer Engine Optimization and Generative Engine Optimization. We engineer your content, schema and authority signals so AI engines quote your brand as the answer — not your competitors.",
+      "Answer Engine Optimization and Generative Engine Optimization. We engineer your content, schema and authority signals so AI engines quote your brand as the answer, not your competitors.",
     deliverables: [
       "AI visibility audit across ChatGPT, Claude, Perplexity, Gemini, Copilot",
       "Dynamic llms.txt + llms-full.txt + AI crawler infrastructure",
@@ -167,7 +180,7 @@ export const SERVICES = [
     title: "Performance Marketing",
     short: "Meta, Google, LinkedIn ads engineered for ROAS.",
     description:
-      "Full-funnel paid media programs. We build creative, run the ads, manage spend, and report on revenue — not vanity metrics.",
+      "Full-funnel paid media programs. We build creative, run the ads, manage spend, and report on revenue, not vanity metrics.",
     deliverables: [
       "Meta Ads (Facebook, Instagram, Messenger)",
       "Google Ads (Search, Performance Max, YouTube)",

@@ -70,10 +70,10 @@ export function Button({
     "inline-flex items-center justify-center gap-2 rounded-full font-medium tracking-tight transition-all duration-200";
   const variants = {
     primary:
-      "bg-[var(--color-accent)] text-black hover:bg-[var(--color-accent-dim)] hover:shadow-[0_0_32px_var(--color-accent-glow)]",
-    ghost: "text-[var(--color-fg)] hover:bg-white/5",
+      "bg-[var(--color-accent)] text-black font-semibold hover:bg-[var(--color-accent-bright)] hover:shadow-[0_0_32px_var(--color-accent-glow)] active:scale-[0.98]",
+    ghost: "text-[var(--color-fg)] hover:bg-white/5 active:scale-[0.98]",
     outline:
-      "border border-[var(--color-line-strong)] text-[var(--color-fg)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]",
+      "border border-[var(--color-line-strong)] text-[var(--color-fg)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] hover:shadow-[0_0_20px_rgba(0,255,102,0.15)] active:scale-[0.98]",
   };
   const cls = `${base} ${sizeCls} ${variants[variant]} ${className}`;
   if (href) {
@@ -96,7 +96,7 @@ export function Button({
 export function Card({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
     <div
-      className={`group relative rounded-2xl border border-[var(--color-line)] bg-[var(--color-bg-card)] p-7 transition-colors hover:border-[var(--color-line-strong)] ${className}`}
+      className={`group relative rounded-2xl border border-[var(--color-line)] bg-[var(--color-bg-card)] p-7 transition-all duration-300 hover:border-[var(--color-accent)]/40 hover:shadow-[0_0_30px_rgba(0,255,102,0.06)] hud-border ${className}`}
     >
       {children}
     </div>

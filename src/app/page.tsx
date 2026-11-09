@@ -13,6 +13,7 @@ import {
   MagneticButton,
   HoverLift,
   Tilt,
+  RadarSweepBackground,
 } from "@/components/motion";
 import { motion } from "motion/react";
 
@@ -31,7 +32,11 @@ const PILLARS = [
   {
     code: "02",
     title: "IT Manpower Deployment",
+<<<<<<< HEAD
     body: "Elite vetted engineers, AI practitioners, and tech leads embedded directly into your engineering team — onshore, nearshore, or offshore.",
+=======
+    body: "Elite vetted engineers, designers and tech leads embedded in your team, onshore or offshore.",
+>>>>>>> origin/main
     href: "/services/it-manpower",
     bullets: [
       "Senior full-stack and platform engineers",
@@ -202,8 +207,13 @@ const PROCESS = [
   },
   {
     step: "02",
+<<<<<<< HEAD
     title: "Architect the Moat",
     body: "Design your custom llms.txt, nested JSON-LD schema (MedicalBusiness, RealEstateAgent, LegalService), and 90-day topical authority roadmap.",
+=======
+    title: "Architect",
+    body: "A 90-day roadmap with the right mix of build, deploy-talent and run-marketing. No bloated retainer: we ship what moves revenue.",
+>>>>>>> origin/main
   },
   {
     step: "03",
@@ -219,6 +229,7 @@ const PROCESS = [
 
 const FAQ = [
   {
+<<<<<<< HEAD
     q: "Where is Top G Studios based and who do you work with?",
     a: "We are headquartered in Bengaluru and Mumbai, with active global client operations serving businesses in India, the United States, UAE, and the UK. Our primary focus is high-ticket Indian business owners (healthcare clinics, luxury developers, law firms) alongside cross-border enterprise brands.",
   },
@@ -229,6 +240,18 @@ const FAQ = [
   {
     q: "How does AEO help law firms navigate Bar Council advertising bans?",
     a: "The Bar Council of India strictly prohibits advocates from commercial advertising. AEO is not advertising — it is structured entity knowledge and verified thought leadership. By publishing authoritative legal commentaries and implementing structured Attorney schema, conversational AI cites your firm as the foremost expert when founders research M&A, cross-border restructuring, or tax law.",
+=======
+    q: "What does Top Gun Studios actually do?",
+    a: "Top Gun Studios is a three-arm AI-native engineering and growth powerhouse. We build production software (IT development), embed elite engineers in your team (IT manpower deployment), and run enterprise-grade digital marketing across AEO, GEO, SEO, performance media, and lifecycle.",
+  },
+  {
+    q: "What is AEO and GEO and why do they matter?",
+    a: "AEO is Answer Engine Optimization: getting your brand cited inside answers from ChatGPT, Claude, Perplexity and Gemini. GEO is Generative Engine Optimization: winning visibility inside Google's AI Overviews and similar generative search experiences. Together, they are how modern buyers discover vendors. Traditional SEO is no longer enough.",
+  },
+  {
+    q: "How is IT manpower deployment different from a typical staffing firm?",
+    a: "We vet for senior engineers, designers and tech leads who have shipped real production systems. We don't bill bodies; we deploy operators who can lead initiatives. Engagements are typically 3 to 12 months, embedded inside your team and tooling.",
+>>>>>>> origin/main
   },
   {
     q: "How do luxury real estate developers benefit from Generative Engine Optimization (GEO)?",
@@ -268,13 +291,23 @@ const ANCHORS = [
 export default function HomePage() {
   return (
     <>
+<<<<<<< HEAD
       {/* HERO SECTION — Cinematic Neon HUD */}
       <section className="relative overflow-hidden pt-32 sm:pt-40 pb-20 sm:pb-32">
+=======
+      {/* HERO: Cockpit Radar and Centered Ambience */}
+      <section className="relative overflow-hidden pt-32 sm:pt-40 pb-20 sm:pb-28">
+        <RadarSweepBackground />
+>>>>>>> origin/main
         <div className="bg-aura absolute inset-0 pointer-events-none" aria-hidden />
         <div className="bg-grid absolute inset-0 pointer-events-none" aria-hidden />
 
         <Container className="relative">
+<<<<<<< HEAD
           {/* Status Badge */}
+=======
+          {/* Status pill */}
+>>>>>>> origin/main
           <motion.div
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -342,10 +375,22 @@ export default function HomePage() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="mt-12"
           >
+<<<<<<< HEAD
             <InteractiveAeoSimulator />
           </motion.div>
 
           {/* In-page Navigation Strip */}
+=======
+            <div className="cli-pill">
+              <span className="text-[var(--color-accent)]">$</span>
+              <span className="text-[var(--color-fg-muted)]">npx</span>
+              <span>topgun deploy --enterprise</span>
+              <span className="caret">▍</span>
+            </div>
+          </motion.div>
+
+          {/* Anchor strip: in-page nav */}
+>>>>>>> origin/main
           <motion.nav
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -377,6 +422,7 @@ export default function HomePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* THE COMPARISON MATRIX — The Old Way vs The Top G Citation Engine */}
       <section id="comparison" className="relative border-t border-white/[0.08] py-24 sm:py-32 overflow-hidden">
         <Container>
@@ -579,6 +625,11 @@ export default function HomePage() {
 
       {/* THREE PILLARS */}
       <section id="pillars" className="relative border-t border-white/[0.08] py-24 sm:py-32">
+=======
+
+      {/* THREE PILLARS: alternating feature rows */}
+      <section id="pillars" className="relative py-24 sm:py-32">
+>>>>>>> origin/main
         <Container>
           <FadeIn className="max-w-3xl">
             <Eyebrow>Three pillars · one operator</Eyebrow>
@@ -586,8 +637,13 @@ export default function HomePage() {
               Build. Deploy. <span className="text-neutral-400">Get cited.</span>
             </H2>
             <Lead className="mt-6">
+<<<<<<< HEAD
               Most agencies sell fragmented pieces. We combine production software engineering,
               on-demand talent deployment, and AI-search authority into one unified system.
+=======
+              Most agencies sell one thing. We sell the entire growth motion: engineering, talent,
+              and AI-search visibility under one roof, on one P&L, with one accountable team.
+>>>>>>> origin/main
             </Lead>
           </FadeIn>
 
@@ -633,6 +689,10 @@ export default function HomePage() {
                   </div>
                 </FadeIn>
 
+<<<<<<< HEAD
+=======
+                {/* Illustration: mock console */}
+>>>>>>> origin/main
                 <FadeIn
                   direction={i % 2 === 1 ? "left" : "right"}
                   delay={0.15}
@@ -760,10 +820,16 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-12 gap-12">
             <FadeIn className="lg:col-span-4" direction="left">
               <Eyebrow>Common questions</Eyebrow>
+<<<<<<< HEAD
               <H2 className="mt-6">Frequently Answered</H2>
               <p className="mt-6 text-neutral-400">
                 Have specific queries about your clinic, law firm, or development? Schedule a direct
                 session with Sanjay Yellar —{" "}
+=======
+              <H2 className="mt-6">FAQ</H2>
+              <p className="mt-6 text-[var(--color-fg-muted)]">
+                Still curious? Ask anything in a 30-min call:{" "}
+>>>>>>> origin/main
                 <a
                   href={SITE.bookingUrl}
                   target="_blank"
@@ -898,8 +964,13 @@ function PillarMock({ code, title }: { code: string; title: string }) {
             </div>
           ))}
         </div>
+<<<<<<< HEAD
         <p className="mt-4 font-mono text-[11px] text-neutral-500">
           // {title} — 4 active pods deployed
+=======
+        <p className="mt-4 font-mono text-[11px] text-[var(--color-fg-dim)]">
+          // {title}: 4 of 5 active
+>>>>>>> origin/main
         </p>
       </div>
     );

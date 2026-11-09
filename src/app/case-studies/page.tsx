@@ -5,7 +5,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Case studies",
   description:
-    "Selected work from Top G Studios — IT development, embedded engineering and AI search visibility programs for modern enterprises.",
+    "Selected work from Top Gun Studios: IT development, embedded engineering and AI search visibility programs for modern enterprises.",
   alternates: { canonical: `${SITE.url}/case-studies` },
 };
 
@@ -52,7 +52,7 @@ export default function CaseStudiesPage() {
             <span className="text-[var(--color-accent)]">compounded</span>.
           </h1>
           <Lead className="mt-7">
-            A look at recent work — engineering, AI search visibility, brand systems and growth
+            A look at recent work, covering engineering, AI search visibility, brand systems and growth
             programs. More on request under NDA.
           </Lead>
         </Container>

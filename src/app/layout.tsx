@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { HUDCursorReticle } from "@/components/motion";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 
@@ -33,23 +34,30 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: `${SITE.name} — ${SITE.tagline}`,
+    default: `${SITE.name} | ${SITE.tagline}`,
     template: `%s | ${SITE.name}`,
   },
   description: SITE.description,
   applicationName: SITE.name,
   authors: [{ name: SITE.name, url: SITE.url }],
   keywords: [...SITE.keywords],
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     type: "website",
     url: SITE.url,
-    title: `${SITE.name} — ${SITE.tagline}`,
+    title: `${SITE.name} | ${SITE.tagline}`,
     description: SITE.description,
     siteName: SITE.name,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE.name} — ${SITE.tagline}`,
+    title: `${SITE.name} | ${SITE.tagline}`,
     description: SITE.description,
   },
   robots: {
@@ -91,6 +99,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         className="min-h-dvh flex flex-col font-sans bg-[var(--color-bg)]"
         suppressHydrationWarning
       >
+        <HUDCursorReticle />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

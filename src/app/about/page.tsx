@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Button, Card, Container, Eyebrow, H2, Lead, Section, Stat } from "@/components/ui";
+import { Button, Card, Container, Eyebrow, H2, Lead, Section } from "@/components/ui";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -98,7 +98,7 @@ export default function AboutPage() {
                     href={SITE.founder.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-full border border-[var(--color-line-strong)] bg-[var(--color-bg)] px-3 py-1 font-mono text-xs text-[var(--color-fg-muted)] hover:border-[var(--color-accent)] hover:text-[var(--color-fg)] transition-colors"
+                    className="rounded-full border border-[var(--color-line-strong)] bg-[var(--color-bg)] px-3.5 py-1.5 font-mono text-xs text-[var(--color-fg-muted)] hover:border-[var(--color-accent)] hover:text-[var(--color-fg)] transition-colors"
                   >
                     LinkedIn Profile ↗
                   </a>
@@ -106,7 +106,7 @@ export default function AboutPage() {
                     href={SITE.founder.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="rounded-full border border-[var(--color-line-strong)] bg-[var(--color-bg)] px-3 py-1 font-mono text-xs text-[var(--color-fg-muted)] hover:border-[var(--color-accent)] hover:text-[var(--color-fg)] transition-colors"
+                    className="rounded-full border border-[var(--color-line-strong)] bg-[var(--color-bg)] px-3.5 py-1.5 font-mono text-xs text-[var(--color-fg-muted)] hover:border-[var(--color-accent)] hover:text-[var(--color-fg)] transition-colors"
                   >
                     X / Twitter ↗
                   </a>

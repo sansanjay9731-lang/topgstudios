@@ -72,9 +72,6 @@ export function Header() {
               setOpen={setOpen}
               items={MEGA_SOLUTIONS}
             />
-            <Link href="/case-studies" className={navLinkCls}>
-              Customers
-            </Link>
             <Link href="/pricing" className={navLinkCls}>
               Pricing
             </Link>
@@ -275,12 +272,12 @@ export function Header() {
               {/* Direct Site Pages */}
               <div className="grid grid-cols-2 gap-2">
                 <Link
-                  href="/case-studies"
+                  href="/#simulator"
                   onClick={() => setMobileOpen(false)}
                   className="flex items-center gap-2 rounded-xl border border-white/[0.06] bg-[#0c1017] p-3.5 text-sm font-medium text-neutral-300 hover:text-white"
                 >
                   <span className="text-emerald-400">⚡</span>
-                  Case Studies
+                  AEO Simulator
                 </Link>
                 <Link
                   href="/about"

@@ -76,7 +76,7 @@ const SCENARIOS: SimulationScenario[] = [
     somScore: "52.4% (+46% in 90d)",
     aggregatorStatus: "Direct Inbound Procurement",
     citations: [
-      { title: "Enterprise Next.js 16 Production Deployments", url: "topgunstudio.com/case-studies", tag: "Verified Code" },
+      { title: "Enterprise Next.js 16 Production Deployments", url: "topgunstudio.com/services/it-development", tag: "Verified Code" },
       { title: "SOC2 Type II Security & Architecture Docs", url: "topgunstudio.com/security", tag: "SOC2 Certified" },
       { title: "GitHub Engineering & AEO Technical Repository", url: "github.com/topgstudios", tag: "Open Source" },
     ],

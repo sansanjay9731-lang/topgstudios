@@ -5,6 +5,7 @@ import Script from "next/script";
 import { Button, Container, Eyebrow, H2, Lead } from "@/components/ui";
 import { SERVICES, SITE } from "@/lib/site";
 import { InteractiveAeoSimulator } from "@/components/InteractiveAeoSimulator";
+import { CapabilityMatrix } from "@/components/CapabilityMatrix";
 import {
   FadeIn,
   Stagger,
@@ -649,57 +650,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* FULL SERVICES GRID */}
-      <section id="services" className="relative border-t border-white/[0.08] py-24 sm:py-32">
-        <Container>
-          <FadeIn className="flex items-end justify-between flex-wrap gap-6">
-            <div className="max-w-2xl">
-              <Eyebrow>Full capability map</Eyebrow>
-              <H2 className="mt-6">Every discipline. One accountable team.</H2>
-            </div>
-            <Button href="/pricing" variant="outline">
-              See pricing
-            </Button>
-          </FadeIn>
-          <Stagger
-            className="mt-16 grid gap-px bg-white/[0.08] sm:grid-cols-2 lg:grid-cols-3 rounded-2xl overflow-hidden border border-white/[0.08]"
-            gap={0.06}
-          >
-            {SERVICES.map((s) => (
-              <StaggerItem key={s.slug}>
-                <Link
-                  href={`/services/${s.slug}`}
-                  className="group relative block h-full bg-[#0c0e14] p-8 transition-all duration-300 hover:bg-[#121620]"
-                >
-                  <motion.div
-                    whileHover={{ y: -2 }}
-                    transition={{ duration: 0.25 }}
-                    className="flex flex-col h-full"
-                  >
-                    <div className="flex items-start justify-between">
-                      <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-neutral-500">
-                        /services/{s.slug}
-                      </span>
-                      <motion.span
-                        className="text-neutral-500 group-hover:text-emerald-400 transition-colors"
-                        whileHover={{ x: 4 }}
-                      >
-                        →
-                      </motion.span>
-                    </div>
-                    <h3 className="mt-6 font-[var(--font-display)] text-xl font-medium tracking-tight text-white">
-                      {s.title}
-                    </h3>
-                    <p className="mt-3 text-sm text-neutral-400 leading-relaxed">
-                      {s.short}
-                    </p>
-                  </motion.div>
-                </Link>
-              </StaggerItem>
-            ))}
-          </Stagger>
-        </Container>
-      </section>
+      <CapabilityMatrix />
 
       {/* PROCESS */}
       <section id="process" className="relative border-t border-white/[0.08] py-24 sm:py-32">

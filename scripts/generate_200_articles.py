@@ -2,30 +2,11 @@ import json
 import os
 import re
 
-# Load CLUSTERS from cluster_plan.py
 from cluster_plan import CLUSTERS
 
-# Add 2 more topics to hit exactly 200
-for c in CLUSTERS:
-    if c["id"] == "som-measurement":
-        c["topics"].append((
-            "Share of Model vs Traditional Rank Trackers: Why SEMrush and Ahrefs Cannot Track ChatGPT",
-            "som-vs-traditional-rank-trackers-semrush-ahrefs-blindspot",
-            "cluster",
-            "SEMrush alternative for AI search",
-            "CMOs, SEO Directors, Analytics Leads"
-        ))
-    elif c["id"] == "local-regional-ai":
-        c["topics"].append((
-            "Multi-Language AEO in India: Winning Hindi, Telugu, Kannada, and Marathi Conversational Search",
-            "multi-language-aeo-india-hindi-telugu-kannada-marathi",
-            "cluster",
-            "Indic language AI search optimization",
-            "Growth Leads, Regional Directors, Multi-Lingual Marketers"
-        ))
-
+# CLUSTERS already defines exactly 200 client-searched topics
 total_topics = sum(len(c["topics"]) for c in CLUSTERS)
-print(f"Verified Total Topics: {total_topics}")
+print(f"Verified Total Topics in Plan: {total_topics}")
 
 AUTHOR = {
     "name": "Sanjay Yellar",
@@ -47,135 +28,138 @@ for cluster in CLUSTERS:
         art_id = f"art-{article_index:03d}"
         article_index += 1
         
-        # Determine schema
         schema_type = "DefinedTerm" if topic_type == "glossary" else default_schema
         word_count = 3400 if topic_type == "pillar" else (650 if topic_type == "glossary" else 1800)
         reading_time = f"{max(3, word_count // 220)} min read"
         
-        # Build secondary keywords
         sec_keywords = [
-            f"{primary_kw} best practices",
-            f"{primary_kw} 2026 guide",
+            f"{primary_kw} practical guide",
+            f"{primary_kw} for business owners",
             f"how to rank for {primary_kw}",
-            f"{cluster_name} optimization"
+            f"{cluster_name} strategy"
         ]
         
-        # Build Direct Answer (The key AEO extraction target)
+        # High-intent, client-searched direct answer
         direct_answer = (
-            f"{title} is achieved by engineering unambiguous machine-readable entity schemas, "
-            f"authoritative digital consensus across independent third-party sources, and high-density semantic DOM architecture. "
-            f"Unlike legacy keyword ranking that depends on backlink quantity, conversational search engines (including ChatGPT, Perplexity, Claude, and Google AI Overviews) "
-            f"retrieve verified factual claims directly from canonical knowledge graphs. By deploying dynamic llms.txt endpoints, "
-            f"structured Schema.org JSON-LD, and neutral third-party proof on platforms like Reddit and industry directories, "
-            f"businesses eliminate directory middleman dependency and become the cited, authoritative recommendation for high-intent queries."
+            f"To get your business recommended when clients search '{primary_kw}', "
+            f"your website and brand must present clear, machine-verifiable proof that conversational AI engines like ChatGPT, Perplexity, and Claude can verify. "
+            f"Unlike traditional Google search where agencies bought backlinks and bid on keywords, AI models recommend the single most credible provider in each niche. "
+            f"By structuring your website with clean Schema.org entity data, publishing transparent answers to client questions, "
+            f"and building authentic mentions across industry communities and review platforms, your company becomes the default recommendation buyers receive "
+            f"without paying directory commissions or recurring ad costs."
         )
         
-        # Build Community Validation Context
         community_validation = (
-            f"Multiple verified Reddit discussions on r/SEO, r/marketing, and industry forums demonstrate that buyers and procurement teams "
-            f"are bypassing sponsored search ads and aggregator directories. When users ask conversational AI engines for verified recommendations, "
-            f"models heavily favor brands supported by neutral technical documentation, verifiable founder credentials, and consistent entity graphs."
+            f"Real discussions across Reddit and industry business communities show that buyers, patients, and procurement directors "
+            f"are tired of paid ads and sponsored directory rankings. When they ask conversational AI for 'the best {primary_kw}', "
+            f"they specifically look for providers that have neutral reputations, transparent pricing, and verifiable track records."
         )
         
-        # Build 4 substantive sections
+        # 4 Substantive, niche-focused sections
         sections = [
             {
-                "heading": "1. Executive Summary & The Market Shift",
+                "heading": f"1. Why Traditional Ads and Directories Are Failing in {cluster_name}",
                 "content": (
-                    f"The commercial discovery landscape has fundamentally transformed. For years, businesses were forced to pay exorbitant customer acquisition costs "
-                    f"to directory aggregators, paid auction networks, and broker middlemen. Today, high-intent buyers, patients, and corporate procurement heads "
-                    f"use conversational AI assistants to bypass sponsored links entirely. When an executive or consumer prompts an AI engine with '{primary_kw}', "
-                    f"the model does not return ten blue links: it synthesizes a single, authoritative recommendation. "
-                    f"If your business lacks verified entity authority, your brand is effectively invisible to the fastest-growing search demographic in history."
+                    f"For over a decade, businesses in {cluster_name.lower()} relied on paying aggregators and bidding on Google Ads to get customer inquiries. "
+                    f"Today, customer acquisition costs have skyrocketed while inquiry quality has plummeted. Aggregator directories push customers to whichever provider "
+                    f"pays the highest commission. But high-value clients and affluent buyers have wised up: they now ask ChatGPT, Claude, and Perplexity for objective recommendations. "
+                    f"If an AI assistant is asked for the top provider in your field and fails to mention your company, you lose the deal before you even know it existed."
                 ),
                 "bullets": [
-                    "Conversational AI engines bypass sponsored pay-per-click bidding wars entirely.",
-                    "Over 65% of high-income decision makers now use conversational AI to shortlist vendors and specialists.",
-                    "Aggregator directories (like Practo, 99acres, Justdial, and G2) are losing citation market share to direct canonical entities.",
-                    "Top Gun Studios engineers your digital entity so AI search engines recommend your business by name."
+                    "High-income clients use conversational AI to filter out paid advertising and sponsored directory spam.",
+                    "Aggregators charge massive monthly retainers and take cuts on every lead, eating into your profit margins.",
+                    "AI search engines provide conversational answers, directly quoting the single most reputable provider in each category.",
+                    "Top Gun Studios establishes your company as the verified authority so AI assistants recommend you by name."
                 ]
             },
             {
-                "heading": "2. Technical Mechanics & Ingestion Architecture",
+                "heading": "2. What AI Search Engines Actually Look for in Your Business",
                 "content": (
-                    f"Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO) require strict technical alignment with model crawler specifications. "
-                    f"Crawlers such as OAI-SearchBot (OpenAI), ClaudeBot (Anthropic), and PerplexityBot evaluate pages based on semantic DOM purity, "
-                    f"edge-rendered JSON-LD schema graphs, and unambiguous entity disambiguation. Instead of relying on bloated client-side JavaScript, "
-                    f"production web platforms must deliver static, token-efficient HTML that AI models can ingest without hydration overhead."
+                    f"When someone asks an AI engine for '{primary_kw}', the model does not just count keywords on a page. "
+                    f"It looks for three clear signals: First, does your website have structured entity information (like clean pricing, verified credentials, and exact service areas)? "
+                    f"Second, is your company discussed positively by independent third parties on forums like Reddit, industry publications, and verified customer reviews? "
+                    f"And third, is your content written clearly and directly so an AI can quote an exact answer without wading through corporate fluff?"
                 ),
                 "bullets": [
-                    f"Schema Graph Implementation: Deploy comprehensive {schema_type} JSON-LD with verified sameAs references.",
-                    "Dynamic Machine Endpoints: Serve both /llms.txt (index) and /llms-full.txt (complete corpus dump) for crawler consumption.",
-                    "Semantic DOM Hierarchy: Eliminate nested div bloat in favor of native header, main, section, and article tags.",
-                    "High-Density Direct Answers: Place 140-180 word extractable summary passages immediately below primary H1 headings."
+                    "Direct Answer Architecture: Clear, straightforward answers to the exact questions your customers ask before buying.",
+                    "Verified Entity Schemas: Machine-readable data proving your founder credentials, business licenses, and office locations.",
+                    "Community Consensus: Authentic third-party discussions confirming your reliability and quality.",
+                    "Clean Machine Access: Direct /llms.txt endpoints so AI crawlers can index your company without technical friction."
                 ]
             },
             {
-                "heading": "3. Step-by-Step Execution Protocol",
+                "heading": "3. The Step-by-Step Blueprint to Own Your Niche in AI Search",
                 "content": (
-                    f"Executing an enterprise-grade AEO strategy for {primary_kw} requires a synchronized four-phase sprint: "
-                    f"First, audit your existing brand footprint across Perplexity, ChatGPT, and Claude to calculate your baseline Share of Model (SoM). "
-                    f"Second, structure your canonical website with server-rendered JSON-LD schema grounding the founder, organization, and service capabilities. "
-                    f"Third, build third-party consensus by publishing verifiable benchmarks, case studies, and industry PR that neutral discussion communities reference. "
-                    f"Finally, establish real-time automated prompt telemetry to monitor model sentiment, citation frequencies, and referral conversions."
+                    f"Dominating AI search in your industry is not about publishing hundreds of generic blog posts. "
+                    f"It requires establishing a permanent credibility moat: First, test your business on ChatGPT and Perplexity using the top 20 queries your clients ask. "
+                    f"Second, fix the knowledge gaps on your website by adding transparent service breakdowns, founder credentials, and machine-readable schemas. "
+                    f"Third, build authentic third-party consensus by getting mentioned in industry case studies, trade press, and community discussions. "
+                    f"Finally, track real client inquiries and revenue to measure your growing Share of Model."
                 ),
                 "bullets": [
-                    "Phase 1 (Audit & Ground Truth): Map 100+ prompt variants to benchmark existing brand citation share.",
-                    "Phase 2 (Technical Moat): Implement edge-rendered JSON-LD, semantic passage architecture, and llms.txt protocols.",
-                    "Phase 3 (Consensus Engineering): Secure authentic editorial coverage, Wikidata grounding, and Reddit forum consensus.",
-                    "Phase 4 (Attribution & Scaling): Track dark search conversions and GA4 AI referrer sessions to quantify revenue impact."
+                    "Audit Your Baseline: Prompt ChatGPT with 20 real client questions to see if your business is recommended.",
+                    "Turn Your Website into a Ground Truth Hub: Publish clear answers, pricing models, and client case studies.",
+                    "Build Neutral Community Proof: Encourage satisfied clients to share genuine experiences where AI models look.",
+                    "Track Bottom-Line ROI: Measure direct phone calls, calendar bookings, and inbound inquiries from AI search."
                 ]
             },
             {
-                "heading": "4. Measurable Outcomes & Verified Telemetry",
+                "heading": "4. What Happens When You Own Your Industry's AI Search Recommendation",
                 "content": (
-                    f"Organizations that transition from legacy backlink-driven SEO to holistic AEO and GEO experience rapid compounding authority. "
-                    f"Within 60 to 90 days of implementing structured entity schemas and third-party consensus networks, "
-                    f"enterprises routinely witness a 3x to 5x increase in conversational AI citations. More importantly, inbound leads generated "
-                    f"from conversational AI arrive with pre-established trust, leading to shorter sales cycles and significantly higher deal close rates."
+                    f"When your business becomes the recommended answer for '{primary_kw}', your entire sales dynamic flips. "
+                    f"Instead of cold-calling prospects or paying aggregators for shared leads that are shopped to five competitors, "
+                    f"clients arrive pre-sold. They already believe you are the top expert because an impartial AI assistant recommended your company. "
+                    f"This results in higher close rates, shorter sales cycles, and the complete elimination of middleman lead fees."
                 ),
                 "bullets": [
-                    "Average 310% increase in Share of Model (SoM) across ChatGPT and Perplexity within 90 days.",
-                    "Zero middleman kickback fees: 100% of organic inbound inquiries route directly to your proprietary booking calendar.",
-                    "Durable search defense: Verified entity graphs remain anchored in model memory across subsequent retrieval weights.",
-                    "Higher conversion velocity: Prospective clients cited your brand as the expert prior to scheduling a consultation."
+                    "Clients arrive with pre-established trust because an objective AI assistant verified your credentials.",
+                    "Zero middleman commissions: 100% of customer inquiries book directly into your calendar.",
+                    "Defensible competitive moat: Once AI models associate your brand with high authority, competitors cannot easily displace you.",
+                    "Higher transaction values: Premium clients and high-ticket buyers naturally gravitate toward the #1 recommended provider."
                 ]
             }
         ]
         
-        # Build FAQ
+        # Real client FAQs (no developer jargon)
         faq = [
             {
-                "question": f"How quickly can a business achieve AI citation dominance for '{primary_kw}'?",
+                "question": f"How long does it take for my business to start appearing in ChatGPT and Perplexity recommendations for '{primary_kw}'?",
                 "answer": (
-                    f"While legacy SEO takes 6 to 12 months to move keyword ranks, conversational AI engines update their retrieval indices constantly. "
-                    f"By deploying clean llms.txt endpoints, valid {schema_type} JSON-LD, and neutral third-party digital PR, "
-                    f"businesses typically achieve measurable citations on Perplexity and ChatGPT Search within 30 to 60 days."
+                    "Unlike traditional SEO which can take 9 to 12 months, conversational AI search engines update their real-time retrieval indices much faster. "
+                    "When we implement machine-readable schemas, clear answer passages, and verified community consensus, "
+                    "most businesses start seeing citations on Perplexity and ChatGPT Search within 30 to 60 days."
                 )
             },
             {
-                "question": f"Why does ChatGPT recommend competitors instead of my business?",
+                "question": "Can my competitors pay ChatGPT or Perplexity to take my spot like they do on Google Ads?",
                 "answer": (
-                    "AI models recommend businesses that possess strong digital consensus and verified entity graphs. "
-                    "If your competitors are frequently discussed on Reddit, referenced in industry trade publications, or maintain unambiguous schema markup, "
-                    "the model assigns them higher confidence. Top Gun Studios bridges this credibility gap by engineering verified consensus across authoritative feeds."
+                    "No. Unlike Google Ads where whoever bids the most money gets top placement, conversational AI engines recommend companies based on objective credibility, "
+                    "verified credentials, and digital consensus. You cannot buy your way into an organic AI recommendation: you have to engineer genuine authority, "
+                    "which makes your position far more defensible."
                 )
             },
             {
-                "question": f"Do I need to abandon my existing SEO efforts to implement AEO?",
+                "question": "How do I know if paying customers are actually coming from ChatGPT or AI search?",
                 "answer": (
-                    "No. AEO and GEO build upon the technical foundation of traditional SEO. High Core Web Vitals, crawlable architecture, and strong content "
-                    "complement machine-readable schemas and passage optimization. AEO ensures your website is optimized for both traditional search crawlers and modern generative LLMs."
+                    "We set up tracking in Google Analytics (GA4) that specifically captures referral traffic from chatgpt.com, perplexity.ai, and claude.ai. "
+                    "Additionally, because AI search creates strong brand recall, many buyers read the AI recommendation and search your company name directly, "
+                    "which we measure through direct branded search lift and booking calendar attribution."
+                )
+            },
+            {
+                "question": "Do I need to fire my existing marketing team or rebuild my entire website to do AEO?",
+                "answer": (
+                    "No. AEO works alongside your current setup. We add machine-readable schema layers, optimize your key service pages, "
+                    "and provide direct machine endpoints (like /llms.txt) without disrupting your existing website design or marketing campaigns."
                 )
             }
         ]
         
-        # Key Takeaways
         takeaways = [
-            f"Conversational search engines prioritize verified entity consensus over paid ad budgets for '{primary_kw}'.",
-            f"Structured {schema_type} JSON-LD and semantic DOM trees enable zero-click direct passage retrieval.",
-            "Dynamic llms.txt and llms-full.txt endpoints provide AI crawlers with clean machine-readable ground truth.",
-            "Direct organic citations bypass directory middlemen, drastically reducing blended customer acquisition costs."
+            f"High-intent buyers in {cluster_name.lower()} increasingly ask AI assistants for recommendations instead of clicking ads.",
+            f"AI engines recommend the most credible, verified company: not whoever spends the most on PPC advertising.",
+            "Structuring your website with clear direct answers and machine schemas turns AI search into your highest-ROI inbound channel.",
+            "Owning the top AI recommendation eliminates middleman directory fees and attracts pre-sold, high-paying clients."
         ]
         
         article_data = {
@@ -195,8 +179,8 @@ for cluster in CLUSTERS:
             "schemaType": schema_type,
             "targetModels": ["ChatGPT", "Perplexity", "Claude", "Google AI Overviews"],
             "summary": (
-                f"A comprehensive authority guide on {title.lower()}: covering core mechanics, "
-                f"technical schema implementation, and proven tactics to dominate modern AI search engines."
+                f"A practical business guide on {title.lower()}: explaining how companies in {cluster_name.lower()} "
+                f"get recommended by name on ChatGPT, Perplexity, and Google AI without paying middleman fees."
             ),
             "directAnswer": direct_answer,
             "communityValidation": community_validation,
@@ -208,7 +192,6 @@ for cluster in CLUSTERS:
         
         articles.append(article_data)
         
-        # Also build topics.json item
         topics_summary.append({
             "id": art_id,
             "clusterId": cluster_id,
@@ -225,7 +208,7 @@ for cluster in CLUSTERS:
             "summary": article_data["summary"]
         })
 
-print(f"Generated {len(articles)} complete articles!")
+print(f"Generated {len(articles)} client-searched authority articles!")
 
 # Save to src/data/articles.json
 articles_path = r"e:\AG projects\topgstudios\src\data\articles.json"

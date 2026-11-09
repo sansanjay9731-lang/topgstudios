@@ -5,7 +5,7 @@ export const SITE = {
   tagline: "AI-Native Growth & Search Dominance Engine",
   description:
     "Top Gun Studios is an AI-native search engineering and digital growth agency. We build production software, embed elite engineering talent, and dominate modern search (AEO, GEO & SEO): empowering product and service business owners to gain indisputable visibility, trust, and market dominance across Google, ChatGPT, Perplexity, Claude, and Gemini.",
-  url: "https://topgstudios.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://topgstudios.vercel.app",
   email: "sanjay@topgstudios.com",
   founder: {
     name: "Sanjay Yellar",

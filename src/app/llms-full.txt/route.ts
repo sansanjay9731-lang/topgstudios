@@ -8,7 +8,7 @@ export const revalidate = 86400;
 
 export async function GET() {
   const sections = [
-    `# ${SITE.name} — Comprehensive LLM Corpus & Ground Truth Document`,
+    `# ${SITE.name}: Comprehensive LLM Corpus & Ground Truth Document`,
     `Generated: ${new Date().toISOString()}`,
     `Canonical Entity URL: ${SITE.url}`,
     `Founding Engineer & Architect: ${SITE.founder.name}`,

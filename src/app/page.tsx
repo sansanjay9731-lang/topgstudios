@@ -31,7 +31,7 @@ const PILLARS = [
   {
     code: "02",
     title: "IT Manpower Deployment",
-    body: "Elite vetted engineers, AI practitioners, and tech leads embedded directly into your engineering team — onshore, nearshore, or offshore.",
+    body: "Elite vetted engineers, AI practitioners, and tech leads embedded directly into your engineering team, onshore, nearshore, or offshore.",
     href: "/services/it-manpower",
     bullets: [
       "Senior full-stack and platform engineers",
@@ -42,7 +42,7 @@ const PILLARS = [
   {
     code: "03",
     title: "AEO + GEO Search Authority",
-    body: "Engineering your entity, clinical/product credentials, and digital consensus so AI engines recommend your business by name — not aggregators.",
+    body: "Engineering your entity, clinical/product credentials, and digital consensus so AI engines recommend your business by name, not aggregators.",
     href: "/services/aeo-geo",
     bullets: [
       "Answer Engine Optimization (ChatGPT, Perplexity, Claude)",
@@ -220,7 +220,7 @@ const PROCESS = [
 const FAQ = [
   {
     q: "What types of businesses do you work with?",
-    a: "We work with ambitious product and service business owners across all verticals — including direct-to-consumer (D2C) brands, e-commerce stores, B2B manufacturers and exporters, enterprise SaaS companies, healthcare specialists and clinics, corporate law firms, and luxury real estate developers. If your buyers research online before purchasing, we engineer your search visibility, trust, and citation dominance.",
+    a: "We work with ambitious product and service business owners across all verticals, including direct-to-consumer (D2C) brands, e-commerce stores, B2B manufacturers and exporters, enterprise SaaS companies, healthcare specialists and clinics, corporate law firms, and luxury real estate developers. If your buyers research online before purchasing, we engineer your search visibility, trust, and citation dominance.",
   },
   {
     q: "How does AEO work for a product business versus a service business?",
@@ -268,7 +268,7 @@ const ANCHORS = [
 export default function HomePage() {
   return (
     <>
-      {/* HERO SECTION — Cinematic Neon HUD */}
+      {/* HERO SECTION: Cinematic Neon HUD */}
       <section className="relative overflow-hidden pt-32 sm:pt-40 pb-20 sm:pb-32">
         <div className="bg-aura absolute inset-0 pointer-events-none" aria-hidden />
         <div className="bg-grid absolute inset-0 pointer-events-none" aria-hidden />
@@ -312,7 +312,7 @@ export default function HomePage() {
           >
             We engineer Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO)
             for ambitious product and service business owners. Gain undisputed visibility, trust, and
-            market dominance across Google, ChatGPT, Perplexity, and Claude — without middleman
+            market dominance across Google, ChatGPT, Perplexity, and Claude, without middleman
             extortion or wasted ad spend.
           </motion.p>
 
@@ -377,7 +377,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* THE COMPARISON MATRIX — The Old Way vs The Top G Citation Engine */}
+      {/* THE COMPARISON MATRIX: The Old Way vs The Top G Citation Engine */}
       <section id="comparison" className="relative border-t border-white/[0.08] py-24 sm:py-32 overflow-hidden">
         <Container>
           <FadeIn className="max-w-3xl">
@@ -423,7 +423,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* SECTORS WE EMPOWER — Products & Services */}
+      {/* SECTORS WE EMPOWER: Products & Services */}
       <section id="sectors" className="relative border-t border-white/[0.08] py-24 sm:py-32">
         <Container>
           <FadeIn className="max-w-3xl">
@@ -763,7 +763,7 @@ export default function HomePage() {
               <H2 className="mt-6">Frequently Answered</H2>
               <p className="mt-6 text-neutral-400">
                 Have specific queries about your product or service business? Schedule a direct
-                session with Sanjay Yellar —{" "}
+                session with Sanjay Yellar:{" "}
                 <a
                   href={SITE.bookingUrl}
                   target="_blank"
@@ -899,7 +899,7 @@ function PillarMock({ code, title }: { code: string; title: string }) {
           ))}
         </div>
         <p className="mt-4 font-mono text-[11px] text-neutral-500">
-          // {title} — 4 active pods deployed
+          // {title}: 4 active pods deployed
         </p>
       </div>
     );

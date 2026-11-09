@@ -49,16 +49,16 @@ public/
 Update everything in `src/lib/site.ts`.
 
 ## Three landing pillars
-1. **IT Development** — software shipped
-2. **IT Manpower Deployment** — embedded engineers/designers/leads
-3. **Digital Marketing Consulting** — enterprise SEO/AEO/GEO/paid/lifecycle
+1. **IT Development**: software shipped
+2. **IT Manpower Deployment**: embedded engineers/designers/leads
+3. **Digital Marketing Consulting**: enterprise SEO/AEO/GEO/paid/lifecycle
 
 Full service grid below covers: AEO+GEO, Enterprise SEO, Performance Marketing, LLM/AI Implementation.
 
 ## AEO/GEO/SEO setup
-- `robots.ts` — explicitly allows GPTBot, ChatGPT-User, ClaudeBot, anthropic-ai, PerplexityBot, Google-Extended, Applebot-Extended, Amazonbot, Bytespider, Meta-ExternalAgent
-- `sitemap.ts` — every route, dynamic from `lib/site.ts`
-- `llms.txt` — full corpus summary served at `/llms.txt` for LLM ingestion
+- `robots.ts`: explicitly allows GPTBot, ChatGPT-User, ClaudeBot, anthropic-ai, PerplexityBot, Google-Extended, Applebot-Extended, Amazonbot, Bytespider, Meta-ExternalAgent
+- `sitemap.ts`: every route, dynamic from `lib/site.ts`
+- `llms.txt`: full corpus summary served at `/llms.txt` for LLM ingestion
 - JSON-LD: Organization (sitewide), Service (per service page), FAQPage (homepage)
 - Metadata API: title templates, OG, Twitter, canonical URLs
 

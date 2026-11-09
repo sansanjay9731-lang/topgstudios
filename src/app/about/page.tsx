@@ -73,7 +73,7 @@ export default function AboutPage() {
         </Container>
       </Section>
 
-      {/* Founder Bio Section — Critical for E-E-A-T */}
+      {/* Founder Bio Section: Critical for E-E-A-T */}
       <Section className="border-t border-[var(--color-line)] bg-[var(--color-bg-elev)]">
         <Container>
           <div className="grid gap-12 lg:grid-cols-12 items-center">

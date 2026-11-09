@@ -62,13 +62,13 @@ export default function AboutPage() {
           <Eyebrow>About the Studio</Eyebrow>
           <h1 className="mt-6 font-[var(--font-display)] text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight leading-[1.05]">
             The AI-native authority engine for{" "}
-            <span className="text-[var(--color-accent)]">high-ticket leaders</span>.
+            <span className="text-[var(--color-accent)]">product & service leaders</span>.
           </h1>
           <Lead className="mt-7">
             {SITE.name} was established on an indisputable market shift: traditional search engines
-            and directory aggregators are losing to conversational AI assistants. We turn elite
-            healthcare clinics, luxury real estate developers, and corporate law firms into the #1
-            cited recommendation on ChatGPT, Perplexity, Claude, and Google AI Overviews.
+            and directory aggregators are losing to conversational AI assistants. We help ambitious
+            product and service business owners gain indisputable visibility, trust, and search
+            dominance across Google, ChatGPT, Perplexity, and Claude.
           </Lead>
         </Container>
       </Section>
@@ -117,31 +117,32 @@ export default function AboutPage() {
             <div className="lg:col-span-7">
               <Eyebrow>Leadership Vision</Eyebrow>
               <h2 className="mt-4 font-[var(--font-display)] text-3xl sm:text-4xl font-medium tracking-tight text-[var(--color-fg)]">
-                &ldquo;If an AI model cannot verify your clinical or commercial proof, you don&apos;t
+                &ldquo;If an AI model cannot verify your product or service proof, you don&apos;t
                 exist.&rdquo;
               </h2>
               <div className="mt-6 space-y-4 text-base text-[var(--color-fg-muted)] leading-relaxed">
                 <p>
-                  For the last 15 years, Indian businesses were held hostage by directory
-                  aggregators. Doctors paid extortionate commission fees to Practo. Real estate
-                  developers spent crores on portal banners. Lawyers were legally banned from
-                  advertising and had to rely solely on offline referrals.
+                  For the last 15 years, businesses were held hostage by ad platforms and directory
+                  aggregators. E-commerce brands burned cash on spiraling Meta and Amazon PPC bids.
+                  Service providers paid extortionate commission fees to directory middlemen and
+                  suffered from bought, fake reviews.
                 </p>
                 <p>
-                  Conversational AI changes the rules entirely. High-net-worth patients, NRI buyers,
-                  and corporate executives now ask ChatGPT and Perplexity:{" "}
+                  Conversational AI changes the rules entirely. Modern buyers, enterprise CTOs, and
+                  affluent clients now ask ChatGPT, Perplexity, and Claude:{" "}
                   <span className="text-[var(--color-fg)] italic">
-                    &ldquo;Who is the most qualified cosmetic dermatologist in Bandra?&rdquo;
+                    &ldquo;What is the best clean botanical skincare brand with verified purity?&rdquo;
                   </span>{" "}
                   or{" "}
                   <span className="text-[var(--color-fg)] italic">
-                    &ldquo;Which luxury developer in Gurgaon has zero RERA litigations?&rdquo;
+                    &ldquo;Who is the top corporate law firm for cross-border tech M&A?&rdquo;
                   </span>
                 </p>
                 <p>
-                  At Top G Studios, we engineer the technical schema, verifiable publications, and
-                  digital consensus that force LLMs to recommend you by name. No tricks, no spam —
-                  just undeniable mathematical and entity authority.
+                  At Top Gun Studios, we engineer the technical schema, verifiable publications, and
+                  digital consensus that force LLMs to recommend you by name. Whether you sell a physical
+                  product or a high-value service, we turn your business into the undeniable organic
+                  authority.
                 </p>
               </div>
             </div>

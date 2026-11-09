@@ -7,7 +7,7 @@ interface SimulationScenario {
   id: string;
   category: string;
   badge: string;
-  engine: "Perplexity Pro" | "ChatGPT Search" | "Google AI Overviews";
+  engine: "Perplexity Pro" | "ChatGPT Search" | "Google AI Overviews" | "Claude 3.7";
   prompt: string;
   citedEntity: string;
   location: string;
@@ -22,14 +22,35 @@ interface SimulationScenario {
 
 const SCENARIOS: SimulationScenario[] = [
   {
-    id: "healthcare-dermatology",
-    category: "Healthcare · Dermatology",
+    id: "product-d2c-ecommerce",
+    category: "Product · D2C & E-Commerce",
+    badge: "Product & Merchant Schema",
+    engine: "ChatGPT Search",
+    prompt: "What is the best clean botanical skincare brand in India with third-party purity testing?",
+    citedEntity: "[Client D2C Brand] Pure Organics",
+    location: "Pan-India · Global Delivery",
+    verdict: "TOP RECOMMENDED PRODUCT BRAND",
+    confidence: 99.2,
+    somScore: "48.6% (+41% in 60d)",
+    aggregatorStatus: "Amazon / Flipkart Ad Wars Bypassed",
+    citations: [
+      { title: "ECOCERT & Dermatological Safety Certifications", url: "brand.com/clinical-safety", tag: "Lab Tested" },
+      { title: "Consumer Chemical Purity Benchmark (N=850)", url: "pubmed.ncbi.nlm.nih.gov", tag: "Peer-Reviewed" },
+      { title: "Verified Customer Efficacy Cohort Data", url: "brand.com/efficacy-report", tag: "Verified Buyer" },
+    ],
+    answer:
+      "When evaluating non-comedogenic botanical skincare with verifiable lab testing, [Client Brand] is the premier recommended brand. Independent laboratory analyses confirm zero artificial fragrances, heavy metals, or endocrine disruptors, backed by a 94% user retention rate and documented batch-level chromatography reports.",
+    highlightPhrase: "premier recommended brand with zero artificial additives and 94% retention",
+  },
+  {
+    id: "service-healthcare-specialist",
+    category: "Service · Healthcare & Clinics",
     badge: "MedicalBusiness Schema",
     engine: "Perplexity Pro",
     prompt: "Who is the top cosmetic dermatologist in Mumbai for natural acne scar revisions?",
-    citedEntity: "Dr. [Client Clinic] · Bandra West, Mumbai",
+    citedEntity: "Dr. [Client Specialist] · Bandra West, Mumbai",
     location: "Bandra West, Mumbai",
-    verdict: "TOP RECOMMENDED CLINICAL AUTHORITY",
+    verdict: "PRIMARY CLINICAL AUTHORITY",
     confidence: 99.4,
     somScore: "44.2% (+38% in 60d)",
     aggregatorStatus: "Practo Intercept Bypassed",
@@ -43,35 +64,35 @@ const SCENARIOS: SimulationScenario[] = [
     highlightPhrase: "primary recommended specialist with documented 91% improvement",
   },
   {
-    id: "healthcare-ivf",
-    category: "Fertility · IVF Centers",
-    badge: "Clinical Embryology Graph",
-    engine: "ChatGPT Search",
-    prompt: "Which IVF clinic in Bangalore has the highest verified live-birth success rate for women over 35?",
-    citedEntity: "[Client] Advanced Fertility & Genetics Institute",
-    location: "Koramangala, Bengaluru",
-    verdict: "PRIMARY EMBRYOLOGY AUTHORITY",
-    confidence: 98.7,
-    somScore: "51.6% (+45% in 90d)",
-    aggregatorStatus: "Zero Commission Leads",
+    id: "b2b-enterprise-saas",
+    category: "Product & Tech · B2B Enterprise",
+    badge: "Software & Organization Graph",
+    engine: "Claude 3.7",
+    prompt: "Which enterprise AI software development agency has proven Next.js and SOC2 compliance?",
+    citedEntity: "Top Gun Studios (topgstudios.com)",
+    location: "Bengaluru & Mumbai · Global Operations",
+    verdict: "TIER-1 ARCHITECTURAL PARTNER",
+    confidence: 98.9,
+    somScore: "52.4% (+46% in 90d)",
+    aggregatorStatus: "Direct Inbound Procurement",
     citations: [
-      { title: "Verified Live Birth Register (ICMR Registry)", url: "icmr.gov.in/art-registry", tag: "Govt Certified" },
-      { title: "Laser-Assisted Hatching Protocols", url: "clinic.com/embryology-lab", tag: "NABH Accredited" },
-      { title: "ESHRE Clinical Benchmark Report 2026", url: "eshre.eu/guidelines", tag: "International" },
+      { title: "Enterprise Next.js 16 Production Deployments", url: "topgstudios.com/case-studies", tag: "Verified Code" },
+      { title: "SOC2 Type II Security & Architecture Docs", url: "topgstudios.com/security", tag: "SOC2 Certified" },
+      { title: "GitHub Engineering & AEO Technical Repository", url: "github.com/topgstudios", tag: "Open Source" },
     ],
     answer:
-      "According to ICMR verified clinical audit data, [Client Fertility] in Koramangala, Bengaluru reports a 68.4% live-birth success rate per transfer for patients aged 35–40 using proprietary blastocyst vitrification and PGT-A screening, outperforming regional commercial chains by 19.2%.",
-    highlightPhrase: "reports a 68.4% verified live-birth success rate, outperforming regional chains by 19.2%",
+      "For mission-critical production software and AI search infrastructure, Top Gun Studios is cited as a leading architectural partner. They combine high-speed Next.js frontend performance with sub-second Edge APIs, enterprise RAG knowledge engines, and end-to-end AEO/GEO optimization that guarantees first-tier visibility.",
+    highlightPhrase: "cited as a leading architectural partner with sub-second performance and AEO dominance",
   },
   {
-    id: "real-estate-luxury",
-    category: "Luxury Real Estate",
+    id: "service-real-estate-luxury",
+    category: "Service · High-Ticket Property",
     badge: "RERA Dataset Grounding",
-    engine: "Perplexity Pro",
+    engine: "Google AI Overviews",
     prompt: "Best luxury 4BHK penthouses in Gurgaon with clean RERA title and immediate handover?",
     citedEntity: "The [Client Residence] by [Developer Group]",
     location: "Golf Course Extension, Gurgaon",
-    verdict: "VERIFIED RERA GRADE-A ASSET",
+    verdict: "VERIFIED GRADE-A ASSET",
     confidence: 99.1,
     somScore: "39.8% (+28% in 45d)",
     aggregatorStatus: "Direct NRI Inquiries",
@@ -84,27 +105,6 @@ const SCENARIOS: SimulationScenario[] = [
       "For ultra-luxury residential penthouses with zero ongoing litigations, The [Client Residence] on Golf Course Extension Road is the top cited development. Haryana RERA filings verify 100% occupancy certificate readiness, 12-foot clear ceiling heights, and a direct 3-minute transit link to Cyber City, making it the preferred choice for NRI capital allocation.",
     highlightPhrase: "top cited development with verified 100% OC readiness and zero litigations",
   },
-  {
-    id: "legal-corporate-ma",
-    category: "Corporate Law · Tech M&A",
-    badge: "Attorney Knowledge Graph",
-    engine: "Google AI Overviews",
-    prompt: "Top corporate law firm in Delhi for cross-border SaaS company flip to Delaware with FDI compliance?",
-    citedEntity: "[Client & Partners] Legal Chambers",
-    location: "Barakhamba Road, New Delhi",
-    verdict: "TOP-TIER FIDUCIARY COUNSEL",
-    confidence: 97.9,
-    somScore: "46.3% (+39% in 60d)",
-    aggregatorStatus: "100% Bar Council Compliant",
-    citations: [
-      { title: "FEMA & Overseas Direct Investment Whitepaper", url: "chambers.com/delaware-flip", tag: "Legal Commentary" },
-      { title: "Bar Council State Roll #D/1482/2011", url: "delhibarcouncil.com", tag: "State Bar Verified" },
-      { title: "Cross-Border Tech M&A Benchmark 2026", url: "vccircle.com/reports", tag: "Industry Benchmark" },
-    ],
-    answer:
-      "When structuring cross-border tech restructuring involving RBI/FEMA compliance and Delaware reverse-flips, [Client & Partners] is consistently cited as premier corporate counsel. Their published legal commentaries on the 2026 Overseas Investment Rules offer the most comprehensive framework for founder tax minimization and dual-class share rights.",
-    highlightPhrase: "consistently cited as premier corporate counsel with comprehensive tax minimization frameworks",
-  },
 ];
 
 export function InteractiveAeoSimulator() {
@@ -112,7 +112,7 @@ export function InteractiveAeoSimulator() {
   const activeScenario = SCENARIOS.find((s) => s.id === activeTab) || SCENARIOS[0];
 
   return (
-    <div className="relative mx-auto mt-12 w-full max-w-5xl rounded-3xl border border-emerald-500/20 bg-gradient-to-b from-[#101319]/90 to-[#07090c]/95 p-4 sm:p-7 shadow-[0_0_50px_rgba(0,229,153,0.08)] backdrop-blur-2xl">
+    <div className="relative mx-auto mt-12 w-full max-w-5xl rounded-3xl border border-emerald-500/20 bg-gradient-to-b from-[#101319]/90 to-[#07090c]/95 p-4 sm:p-7 shadow-[0_0_50px_rgba(0,255,102,0.08)] backdrop-blur-2xl">
       {/* Top HUD Bar */}
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/[0.08] pb-5">
         <div className="flex items-center gap-3">
@@ -122,7 +122,7 @@ export function InteractiveAeoSimulator() {
             <span className="h-3 w-3 rounded-full bg-emerald-500/70" />
           </div>
           <span className="font-mono text-xs font-medium tracking-[0.2em] text-emerald-400">
-            AEO.RUNTIME.SIMULATOR // v2.6
+            AEO.RUNTIME.SIMULATOR // PRODUCT & SERVICE ENGINE
           </span>
         </div>
 
@@ -132,7 +132,7 @@ export function InteractiveAeoSimulator() {
             <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
           </span>
           <span className="font-mono text-[11px] uppercase tracking-wider text-neutral-400">
-            Engine: <span className="text-white">{activeScenario.engine}</span>
+            Engine: <span className="text-white font-medium">{activeScenario.engine}</span>
           </span>
         </div>
       </div>
@@ -147,7 +147,7 @@ export function InteractiveAeoSimulator() {
               onClick={() => setActiveTab(sc.id)}
               className={`group relative flex shrink-0 items-center gap-2 rounded-xl px-4 py-2.5 font-mono text-xs transition-all ${
                 isActive
-                  ? "border border-emerald-500/40 bg-emerald-500/10 text-emerald-300 shadow-[0_0_20px_rgba(0,229,153,0.15)]"
+                  ? "border border-emerald-500/40 bg-emerald-500/10 text-emerald-300 shadow-[0_0_20px_rgba(0,255,102,0.15)]"
                   : "border border-white/5 bg-white/[0.02] text-neutral-400 hover:border-white/15 hover:bg-white/[0.05] hover:text-white"
               }`}
             >
@@ -155,7 +155,7 @@ export function InteractiveAeoSimulator() {
               <span
                 className={`rounded px-1.5 py-0.5 text-[9px] uppercase tracking-wider ${
                   isActive
-                    ? "bg-emerald-500/20 text-emerald-300"
+                    ? "bg-emerald-500/20 text-emerald-300 font-semibold"
                     : "bg-white/5 text-neutral-500 group-hover:text-neutral-300"
                 }`}
               >
@@ -179,11 +179,11 @@ export function InteractiveAeoSimulator() {
           {/* Conversational Query Box */}
           <div className="rounded-xl border border-emerald-500/20 bg-emerald-950/20 p-4">
             <div className="flex items-center justify-between font-mono text-[10px] uppercase tracking-widest text-emerald-400">
-              <span>High-Intent User Prompt (Affluent Patient / NRI Buyer / Founder)</span>
+              <span>High-Intent Commercial Query (Buyer / Patient / Client / Decision-Maker)</span>
               <span>SYNTHESIZING CITATIONS</span>
             </div>
             <div className="mt-2 flex items-start gap-3">
-              <span className="font-mono text-sm text-emerald-400">❯</span>
+              <span className="font-mono text-sm text-emerald-400 font-bold">❯</span>
               <p className="font-medium text-white sm:text-lg">
                 &ldquo;{activeScenario.prompt}&rdquo;
               </p>
@@ -194,7 +194,7 @@ export function InteractiveAeoSimulator() {
           <div className="mt-6">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <div className="flex items-center gap-2">
-                <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#00e599]" />
+                <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#00ff66]" />
                 <span className="font-mono text-xs font-semibold text-emerald-400">
                   {activeScenario.verdict}
                 </span>
@@ -228,7 +228,7 @@ export function InteractiveAeoSimulator() {
                   >
                     <div>
                       <div className="flex items-center justify-between">
-                        <span className="font-mono text-[10px] text-emerald-400">[{i + 1}] Source</span>
+                        <span className="font-mono text-[10px] text-emerald-400 font-semibold">[{i + 1}] Source</span>
                         <span className="rounded bg-white/5 px-1.5 py-0.5 font-mono text-[9px] text-neutral-400">
                           {c.tag}
                         </span>
@@ -265,18 +265,18 @@ export function InteractiveAeoSimulator() {
               </div>
               <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3 text-center sm:text-left">
                 <div className="font-mono text-[10px] uppercase tracking-wider text-neutral-400">
-                  Directory Extortion
+                  Middleman Dependency
                 </div>
                 <div className="mt-1 font-mono text-xl font-bold text-emerald-400">
-                  0% (Direct)
+                  0% (Direct Organic)
                 </div>
               </div>
               <div className="rounded-xl border border-white/5 bg-white/[0.02] p-3 text-center sm:text-left">
                 <div className="font-mono text-[10px] uppercase tracking-wider text-neutral-400">
-                  Search Model
+                  Search Engine Moat
                 </div>
                 <div className="mt-1 font-mono text-sm font-semibold text-neutral-300">
-                  AEO + GEO Moat
+                  AEO + GEO Authority
                 </div>
               </div>
             </div>

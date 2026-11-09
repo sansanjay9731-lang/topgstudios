@@ -42,7 +42,7 @@ const PILLARS = [
   {
     code: "03",
     title: "AEO + GEO Search Authority",
-    body: "Engineering your entity, clinical credentials, and digital consensus so AI engines recommend your business by name — not aggregators.",
+    body: "Engineering your entity, clinical/product credentials, and digital consensus so AI engines recommend your business by name — not aggregators.",
     href: "/services/aeo-geo",
     bullets: [
       "Answer Engine Optimization (ChatGPT, Perplexity, Claude)",
@@ -52,104 +52,104 @@ const PILLARS = [
   },
 ];
 
-const TARGET_NICHES = [
+const TARGET_SECTORS = [
   {
-    code: "NICHE // 01",
-    title: "Healthcare & Super-Specialty Clinics",
-    subtitle: "Dermatology · IVF Centers · Plastic Surgery · Implantology",
+    code: "SECTOR // 01",
+    title: "Product Brands & Modern D2C",
+    subtitle: "E-Commerce · Consumer Goods · Clean Beauty · B2B Exporters",
     description:
-      "Affluent patients no longer trust manipulated 4.9-star aggregator ratings. When patients ask ChatGPT or Perplexity for the top cosmetic dermatologist or highest-success IVF clinic in Mumbai, Delhi, or Bangalore, we make your clinic the undisputed, verified answer.",
-    badge: "Medical Entity Schema",
+      "Modern buyers ask ChatGPT and Perplexity: 'What is the best clean skincare brand with verified lab tests?' or 'Top industrial CNC parts exporter in India'. We structure your product catalog, third-party lab certifications, and merchant schemas so AI engines recommend your products by name.",
+    badge: "Product & Merchant Schema",
+    icon: "📦",
+    link: "/services/aeo-geo",
+    stats: "3.8x higher organic conversion vs paid ad clicks",
+    tagline: "Bypasses Amazon/Meta ad-burn · Direct brand citation",
+  },
+  {
+    code: "SECTOR // 02",
+    title: "High-Value Service Businesses",
+    subtitle: "Healthcare Clinics · Law Firms · Wealth Advisory · Real Estate",
+    description:
+      "Clients and patients no longer trust bought 4.9-star reviews on commercial directories. When high-ticket clients ask conversational AI for the top cosmetic dermatologist, M&A lawyer, or luxury penthouse developer, we ensure your firm is the undisputed, verified answer.",
+    badge: "Service & Entity Knowledge Graph",
     icon: "🩺",
     link: "/services/aeo-geo",
-    stats: "3.4x higher patient LTV vs Practo leads",
-    tagline: "Zero commission kickbacks · Direct clinical referrals",
+    stats: "Zero commission kickbacks · Direct high-ticket inquiries",
+    tagline: "Bypasses Practo / 99acres middleman extortion",
   },
   {
-    code: "NICHE // 02",
-    title: "Luxury Real Estate & Grade-A Developers",
-    subtitle: "Ultra-Luxury Residences · Gated Villas · NRI Investments",
+    code: "SECTOR // 03",
+    title: "B2B Tech & Enterprise SaaS",
+    subtitle: "Software Platforms · Cloud Infra · Dev Tools · Technical Consultancies",
     description:
-      "HNIs and global NRIs in the US and Dubai use conversational AI to evaluate titles, RERA delivery track records, and capital yields. We structure your architectural datasets and RERA disclosures so AI engines quote your developments directly.",
-    badge: "RERA Dataset Grounding",
-    icon: "🏙️",
-    link: "/services/aeo-geo",
-    stats: "Direct NRI inquiries from US, UAE & UK",
-    tagline: "Bypasses 99acres ad-bloat · Objective RERA authority",
-  },
-  {
-    code: "NICHE // 03",
-    title: "Legal, Tax & Wealth Management",
-    subtitle: "Corporate Law · Tech M&A · Cross-Border Tax · Family Offices",
-    description:
-      "The Bar Council strictly forbids direct advertising. We engineer thought leadership, legal case commentaries, and Attorney schema that AI engines pull as authoritative counsel for high-stakes corporate inquiries.",
-    badge: "Attorney Knowledge Graph",
-    icon: "⚖️",
-    link: "/services/aeo-geo",
-    stats: "100% Bar Council compliant",
-    tagline: "Un-sponsored peer authority · High-stakes deal discovery",
-  },
-  {
-    code: "NICHE // 04",
-    title: "Tech Innovators & Cross-Border Exporters",
-    subtitle: "India-to-US Exporters · Clean D2C Brands · Enterprise SaaS",
-    description:
-      "Direct discovery by North American and European procurement teams. We transform technical spec sheets and ISO certifications into machine-readable knowledge graphs that answer engines source.",
-    badge: "Global Procurement Graph",
-    icon: "🌐",
+      "Enterprise CTOs and procurement directors research vendor capability and security compliance inside conversational AI before ever booking a demo. We engineer your technical documentation, SOC2 proof, and code repositories to dominate conversational vendor discovery.",
+    badge: "Software & Corporate Graph",
+    icon: "⚡",
     link: "/services/it-development",
-    stats: "Top citation share across US & EU models",
-    tagline: "Replaces dying B2B trade portals with automated AI discovery",
+    stats: "Top citation share across US, EU & Indian models",
+    tagline: "Captures inbound enterprise RFPs at the research phase",
+  },
+  {
+    code: "SECTOR // 04",
+    title: "Regional & Metro Market Leaders",
+    subtitle: "Multi-Location Chains · Boutique Practices · Regional Providers",
+    description:
+      "Capture hyper-local and multi-city conversational searches across Mumbai, Bengaluru, Delhi NCR, and global hubs. We deploy nested GeoCoordinates and localized authority citations that force AI engines to recommend your local branches.",
+    badge: "LocalBusiness Schema",
+    icon: "📍",
+    link: "/services/aeo-geo",
+    stats: "Dominates city-specific conversational recommendations",
+    tagline: "Replaces dying Justdial directories with organic AI trust",
   },
 ];
 
 const BATTLE_COMPARISON = [
   {
     aspect: "Discovery Model",
-    oldWay: "Pay-to-play directories (Practo, Justdial, 99acres) selling your leads to competitors.",
-    topGWay: "Direct citation dominance on ChatGPT, Perplexity, Claude & Google AI Overviews.",
+    oldWay: "Pay-to-play directories & ad platforms (Amazon Ads, Google Ads, Practo, 99acres) selling your leads to competitors.",
+    topGWay: "Direct citation dominance on Google AI Overviews, ChatGPT, Perplexity, and Claude.",
   },
   {
-    aspect: "Patient / Buyer Trust",
-    oldWay: "Inflated 4.9-star ratings widely recognized as bought or manipulated by PR agencies.",
-    topGWay: "Verified clinical registries, RERA filings, and peer-reviewed case studies.",
+    aspect: "Customer & Buyer Trust",
+    oldWay: "Inflated 4.9-star ratings widely recognized by savvy consumers as bought or manipulated by PR agencies.",
+    topGWay: "Verified third-party consensus, lab certifications, RERA filings, and peer-reviewed proof.",
   },
   {
-    aspect: "Economic Model",
-    oldWay: "Perpetual 20–40% commission cuts or ₹400–₹800/click ad costs suffering severe click fraud.",
-    topGWay: "Permanent compounding entity authority that yields free high-ticket referrals indefinitely.",
+    aspect: "Economic Sustainability",
+    oldWay: "Perpetual 20–40% commission cuts or ₹400–₹800/click ad costs suffering from severe click fraud.",
+    topGWay: "Permanent, compounding organic entity authority that yields free high-ticket customers indefinitely.",
   },
   {
-    aspect: "Regulatory Compliance",
-    oldWay: "Risk of Bar Council or Medical Council advertising penalties from aggressive marketing.",
-    topGWay: "100% regulatory compliant through objective knowledge graphs and thought leadership.",
+    aspect: "Conversion Quality",
+    oldWay: "Low-intent price shoppers comparing 10 commoditized listings simultaneously.",
+    topGWay: "High-intent buyers arriving pre-sold because AI recommended your brand as the single best choice.",
   },
 ];
 
 const COMMUNITY_VALIDATIONS = [
   {
-    subreddit: "r/IndianSkincareAddicts",
+    subreddit: "r/IndianSkincareAddicts & r/eCommerce",
     upvotes: "▲ 428",
-    topic: "Healthcare & Aesthetics",
+    topic: "Product Discovery",
     quote:
-      "Practo and Google Reviews are flooded with fake 5-star reviews and clinics pushing ₹80,000 package deals. When I need a serious dermatologist, I ask ChatGPT and Perplexity to analyze un-sponsored clinical case studies.",
-    takeaway: "Aggregator trust has collapsed. AI search is the new referral standard.",
+      "I never trust Amazon sponsored badges or Instagram ads anymore. When I want an actual high-purity product, I ask ChatGPT and Perplexity to analyze independent laboratory testing and ingredient lists.",
+    takeaway: "Product shoppers use conversational AI to filter out paid ad noise.",
   },
   {
-    subreddit: "r/LegalAdviceIndia",
-    upvotes: "▲ 312",
-    topic: "Legal & Fiduciary",
+    subreddit: "r/developersIndia & r/SaaS",
+    upvotes: "▲ 386",
+    topic: "B2B Tech Vendor Search",
     quote:
-      "Advocates cannot advertise under Indian law. Finding trustworthy corporate legal counsel has always been word-of-mouth — and today, conversational search engines act as the primary, un-sponsored word-of-mouth engine.",
-    takeaway: "AEO bypasses ad bans by positioning partners as verified knowledge entities.",
+      "When our team evaluated cloud infrastructure agencies, we ran 10 prompts across Claude and Perplexity. The agencies that showed up with clean open-source repos and citable architecture docs got the contract.",
+    takeaway: "Enterprise buyers use AI reasoning to shortlist serious engineering partners.",
   },
   {
-    subreddit: "r/IndiaInvestments",
-    upvotes: "▲ 564",
-    topic: "Luxury Real Estate",
+    subreddit: "r/LegalAdviceIndia & r/bangalore",
+    upvotes: "▲ 512",
+    topic: "High-Ticket Services",
     quote:
-      "Broker portals like 99acres push whoever pays the highest ad fee. Searching on Perplexity with RERA numbers gave me clean delivery histories and objective comparisons for Gurgaon penthouses.",
-    takeaway: "High-net-worth buyers use conversational AI to bypass portal noise.",
+      "Commercial aggregators push whoever pays the highest commission fee. Conversational search engines gave me objective, verified case histories and credentials without the commercial bias.",
+    takeaway: "High-ticket service clients rely on AI for un-sponsored recommendations.",
   },
 ];
 
@@ -170,7 +170,7 @@ const JOURNEY_PHASES = [
     phase: "02",
     title: "Content Factory",
     timeline: "Week 3–20",
-    detail: "40 to 200 authoritative cluster articles mapped across high-ticket Indian & global niches.",
+    detail: "40 to 200 authoritative cluster articles mapped across high-intent product & service searches.",
   },
   {
     phase: "03",
@@ -192,18 +192,18 @@ const JOURNEY_PHASES = [
   },
 ];
 
-const AI_ENGINES = ["ChatGPT", "Claude", "Perplexity", "Gemini", "Copilot", "AI Overviews", "Grok"];
+const AI_ENGINES = ["ChatGPT", "Claude", "Perplexity", "Gemini", "Copilot", "Google AI Overviews", "Grok"];
 
 const PROCESS = [
   {
     step: "01",
     title: "Diagnose & Audit",
-    body: "Full audit of your entity footprint, clinical or corporate schema, and current Share of Model across ChatGPT, Perplexity, Claude, and Google AI Overviews.",
+    body: "Full audit of your entity footprint, product or service schema, and current Share of Model across ChatGPT, Perplexity, Claude, and Google AI Overviews.",
   },
   {
     step: "02",
     title: "Architect the Moat",
-    body: "Design your custom llms.txt, nested JSON-LD schema (MedicalBusiness, RealEstateAgent, LegalService), and 90-day topical authority roadmap.",
+    body: "Design your custom llms.txt, nested JSON-LD schema (Product, Service, LocalBusiness, Organization), and 90-day topical authority roadmap.",
   },
   {
     step: "03",
@@ -213,26 +213,26 @@ const PROCESS = [
   {
     step: "04",
     title: "Compound & Dominate",
-    body: "Automated weekly Share of Model tracking. Your brand moves from absent to the #1 recommended answer for high-intent, high-ticket searches.",
+    body: "Automated weekly Share of Model tracking. Your brand moves from absent to the #1 recommended answer for high-intent product and service searches.",
   },
 ];
 
 const FAQ = [
   {
-    q: "Where is Top G Studios based and who do you work with?",
-    a: "We are headquartered in Bengaluru and Mumbai, with active global client operations serving businesses in India, the United States, UAE, and the UK. Our primary focus is high-ticket Indian business owners (healthcare clinics, luxury developers, law firms) alongside cross-border enterprise brands.",
+    q: "What types of businesses do you work with?",
+    a: "We work with ambitious product and service business owners across all verticals — including direct-to-consumer (D2C) brands, e-commerce stores, B2B manufacturers and exporters, enterprise SaaS companies, healthcare specialists and clinics, corporate law firms, and luxury real estate developers. If your buyers research online before purchasing, we engineer your search visibility, trust, and citation dominance.",
   },
   {
-    q: "Why is AEO critical for Indian doctors, clinics, and hospitals?",
-    a: "Aggregators like Practo and Justdial take hefty commissions, promote your competitors on your profile, and suffer from rampant review manipulation. High-intent, affluent patients now ask ChatGPT and Perplexity: 'Who is the best cosmetic dermatologist in Bandra with natural results?' We engineer your technical entity and clinical data so AI engines recommend your clinic directly.",
+    q: "How does AEO work for a product business versus a service business?",
+    a: "For product businesses, we structure rich Product and MerchantReturn schemas, laboratory purity certifications, ingredient breakdowns, and customer cohort data so AI engines recommend your items when shoppers search for 'best [product] with verified quality'. For service businesses, we engineer Physician, LegalService, RealEstateAgent, and Person schemas with citable case studies and credentials so AI quotes your team as the premier authority.",
   },
   {
-    q: "How does AEO help law firms navigate Bar Council advertising bans?",
-    a: "The Bar Council of India strictly prohibits advocates from commercial advertising. AEO is not advertising — it is structured entity knowledge and verified thought leadership. By publishing authoritative legal commentaries and implementing structured Attorney schema, conversational AI cites your firm as the foremost expert when founders research M&A, cross-border restructuring, or tax law.",
+    q: "Why is AI search visibility replacing traditional Google Ads and SEO?",
+    a: "Over 70% of high-intent buyers now research products and vendors inside AI assistants (ChatGPT, Perplexity, Claude, Google AI Overviews) before ever clicking a website link. Paid ads suffer from skyrocketing cost-per-click and click fraud, while directory aggregators take 20–40% commission cuts. AEO builds a permanent, organic citation moat that positions your business as the default recommended answer.",
   },
   {
-    q: "How do luxury real estate developers benefit from Generative Engine Optimization (GEO)?",
-    a: "NRI buyers in the US, Dubai, and the UK research multi-crore property investments using AI assistants to bypass biased broker portals. We structure RERA compliance data, masterplans, and investment metrics so Perplexity and ChatGPT quote your developments when buyers search for luxury penthouses or gated villas.",
+    q: "Where is Top Gun Studios based and do you serve international clients?",
+    a: "We are headquartered in Bengaluru and Mumbai, India, with active global client operations serving product and service businesses across India, the United States, UAE, and the UK. We combine world-class engineering with global delivery to ensure your business dominates conversational search both domestically and internationally.",
   },
   {
     q: "What is Share of Model (SoM) and how do you track it?",
@@ -256,8 +256,8 @@ const faqSchema = {
 
 const ANCHORS = [
   { label: "Live Simulator", href: "#simulator" },
-  { label: "The New Rules", href: "#comparison" },
-  { label: "Target Niches", href: "#niches" },
+  { label: "The Paradigm", href: "#comparison" },
+  { label: "Who We Serve", href: "#sectors" },
   { label: "Community Proof", href: "#community" },
   { label: "12-Month Journey", href: "#journey" },
   { label: "Pillars", href: "#pillars" },
@@ -288,7 +288,7 @@ export default function HomePage() {
               className="inline-flex items-center gap-2.5 rounded-full border border-emerald-500/30 bg-[#0c1017]/80 px-4 py-1.5 font-mono text-[11px] text-neutral-300 hover:border-emerald-400 hover:text-white transition-all backdrop-blur shadow-[0_0_20px_rgba(0,255,102,0.12)]"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 pulse-dot" />
-              <span className="font-semibold text-emerald-400">SYSTEM ONLINE</span> · INDIA HQ · SERVING INDIA & GLOBAL
+              <span className="font-semibold text-emerald-400">SEARCH DOMINANCE ENGINE</span> · PRODUCTS & SERVICES · INDIA & GLOBAL
               <span className="text-emerald-400">→</span>
             </a>
           </motion.div>
@@ -301,7 +301,7 @@ export default function HomePage() {
           >
             <span className="text-gradient">Make AI recommend</span>
             <br />
-            <span className="text-[var(--color-accent)] text-glow">you by name.</span>
+            <span className="text-[var(--color-accent)] text-glow">your business by name.</span>
           </motion.h1>
 
           <motion.p
@@ -311,9 +311,9 @@ export default function HomePage() {
             className="mx-auto mt-8 max-w-3xl text-center text-lg sm:text-xl leading-relaxed text-neutral-400"
           >
             We engineer Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO)
-            for India’s elite healthcare clinics, luxury real estate developers, and corporate law
-            firms. Get cited as the primary authority on ChatGPT, Claude, Perplexity, and Google AI
-            Overviews — with zero directory extortion.
+            for ambitious product and service business owners. Gain undisputed visibility, trust, and
+            market dominance across Google, ChatGPT, Perplexity, and Claude — without middleman
+            extortion or wasted ad spend.
           </motion.p>
 
           <motion.div
@@ -383,23 +383,24 @@ export default function HomePage() {
           <FadeIn className="max-w-3xl">
             <Eyebrow>The Paradigm Shift</Eyebrow>
             <H2 className="mt-6">
-              The death of aggregator extortion.{" "}
-              <span className="text-emerald-400">The birth of AI authority.</span>
+              The death of directory middlemen.{" "}
+              <span className="text-emerald-400">The birth of AI search dominance.</span>
             </H2>
             <Lead className="mt-6">
-              Traditional directories hold businesses hostage with pay-to-play bids and fake reviews.
-              Conversational AI bypasses them completely by citing objective ground truth.
+              Whether you sell physical products or high-ticket services, traditional ad networks
+              and directory aggregators trap you in bidding wars. Conversational AI bypasses them
+              completely by citing objective, verified authority.
             </Lead>
           </FadeIn>
 
           <div className="mt-16 overflow-hidden rounded-3xl border border-white/[0.08] bg-[#0c0e14] shadow-2xl">
             <div className="grid grid-cols-1 md:grid-cols-12 border-b border-white/[0.08] bg-white/[0.02] p-5 font-mono text-xs uppercase tracking-widest">
-              <div className="md:col-span-3 text-neutral-400">Discovery Factor</div>
+              <div className="md:col-span-3 text-neutral-400">Evaluation Factor</div>
               <div className="md:col-span-4 text-red-400/90 flex items-center gap-2">
-                <span>✕</span> The Old Way (Practo, 99acres, B2B Portals)
+                <span>✕</span> The Old Way (Ads & Directory Middlemen)
               </div>
               <div className="md:col-span-5 text-emerald-400 font-semibold flex items-center gap-2">
-                <span>✓</span> The Top G AEO/GEO Engine
+                <span>✓</span> The Top Gun AEO/GEO Engine
               </div>
             </div>
 
@@ -422,60 +423,59 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* TARGET NICHES — High-Ticket Indian Verticals */}
-      <section id="niches" className="relative border-t border-white/[0.08] py-24 sm:py-32">
+      {/* SECTORS WE EMPOWER — Products & Services */}
+      <section id="sectors" className="relative border-t border-white/[0.08] py-24 sm:py-32">
         <Container>
           <FadeIn className="max-w-3xl">
-            <Eyebrow>Specialized Verticals</Eyebrow>
+            <Eyebrow>Who We Empower</Eyebrow>
             <H2 className="mt-6">
-              Built for high-ticket industries where{" "}
-              <span className="text-emerald-400">trust is everything.</span>
+              Built for product & service businesses where{" "}
+              <span className="text-emerald-400">trust drives revenue.</span>
             </H2>
             <Lead className="mt-6">
-              When a patient, property buyer, or corporate executive asks an AI model for a
-              recommendation, there is no page two. You are either the cited answer or you don&apos;t
-              exist.
+              When a buyer, patient, or corporate executive asks an AI model for a recommendation,
+              there is no page two. You are either the cited answer or you don&apos;t exist.
             </Lead>
           </FadeIn>
 
           <div className="mt-16 grid gap-7 md:grid-cols-2">
-            {TARGET_NICHES.map((niche, idx) => (
-              <FadeIn key={niche.code} delay={idx * 0.1}>
+            {TARGET_SECTORS.map((sector, idx) => (
+              <FadeIn key={sector.code} delay={idx * 0.1}>
                 <div className="gradient-border p-8 h-full flex flex-col justify-between group hover:border-emerald-500/50 transition-all">
                   <div>
                     <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-[0.2em]">
-                      <span className="text-emerald-400">{niche.code}</span>
+                      <span className="text-emerald-400">{sector.code}</span>
                       <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-0.5 text-emerald-300 text-[10px]">
-                        {niche.badge}
+                        {sector.badge}
                       </span>
                     </div>
 
                     <div className="mt-5 flex items-center gap-3">
-                      <span className="text-2xl">{niche.icon}</span>
+                      <span className="text-2xl">{sector.icon}</span>
                       <h3 className="font-[var(--font-display)] text-2xl font-medium tracking-tight text-white">
-                        {niche.title}
+                        {sector.title}
                       </h3>
                     </div>
 
                     <p className="mt-2 font-mono text-xs text-emerald-400/80">
-                      {niche.subtitle}
+                      {sector.subtitle}
                     </p>
 
                     <p className="mt-5 text-sm leading-relaxed text-neutral-300">
-                      {niche.description}
+                      {sector.description}
                     </p>
 
                     <div className="mt-5 rounded-lg bg-white/[0.03] p-3 border border-white/5 font-mono text-xs text-neutral-400">
-                      💡 {niche.tagline}
+                      💡 {sector.tagline}
                     </div>
                   </div>
 
                   <div className="mt-8 pt-6 border-t border-white/[0.08] flex items-center justify-between">
                     <span className="font-mono text-xs font-semibold text-emerald-400">
-                      {niche.stats}
+                      {sector.stats}
                     </span>
                     <Link
-                      href={niche.link}
+                      href={sector.link}
                       className="font-mono text-xs text-neutral-300 group-hover:text-emerald-400 flex items-center gap-1 group-hover:translate-x-1 transition-all"
                     >
                       Explore Playbook →
@@ -518,7 +518,7 @@ export default function HomePage() {
                     </div>
 
                     <div className="mt-4 font-mono text-[10px] uppercase tracking-wider text-neutral-500">
-                      Topic: {c.topic}
+                      Category: {c.topic}
                     </div>
 
                     <blockquote className="mt-4 text-sm italic text-neutral-300 leading-relaxed">
@@ -748,7 +748,7 @@ export default function HomePage() {
               />
             </StaggerItem>
             <StaggerItem>
-              <AnimatedStat value="100%" label="Bar Council Compliant" />
+              <AnimatedStat value="100%" label="Organic Authority Moat" />
             </StaggerItem>
           </Stagger>
         </Container>
@@ -762,7 +762,7 @@ export default function HomePage() {
               <Eyebrow>Common questions</Eyebrow>
               <H2 className="mt-6">Frequently Answered</H2>
               <p className="mt-6 text-neutral-400">
-                Have specific queries about your clinic, law firm, or development? Schedule a direct
+                Have specific queries about your product or service business? Schedule a direct
                 session with Sanjay Yellar —{" "}
                 <a
                   href={SITE.bookingUrl}
@@ -916,10 +916,10 @@ function PillarMock({ code, title }: { code: string; title: string }) {
       </div>
       <div className="mt-5 grid grid-cols-2 gap-3">
         {[
-          { k: "Share of Model", v: "44.2%", sub: "+38.0% in 60d" },
-          { k: "AI Citations", v: "182", sub: "ChatGPT & PPX" },
-          { k: "High-Ticket Leads", v: "4.8x", sub: "un-sponsored" },
-          { k: "Aggregator Spend", v: "-85%", sub: "zero kickbacks" },
+          { k: "Share of Model", v: "48.6%", sub: "+41.0% in 60d" },
+          { k: "AI Citations", v: "214", sub: "ChatGPT, PPX & Claude" },
+          { k: "Customer Trust", v: "99.2%", sub: "verified schema" },
+          { k: "Ad-Spend Burn", v: "-80%", sub: "zero middleman cuts" },
         ].map((m) => (
           <div
             key={m.k}

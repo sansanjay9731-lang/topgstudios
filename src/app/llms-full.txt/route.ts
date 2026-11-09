@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { SITE, SERVICES } from "@/lib/site";
 import { CONTENT_CLUSTERS } from "@/lib/content.config";
-import topics from "@/data/topics.json";
+import articles from "@/data/articles.json";
 
 export const dynamic = "force-static";
 export const revalidate = 86400;
@@ -27,20 +27,26 @@ export async function GET() {
     `=== 11 STRATEGIC AEO & GEO CLUSTERS ===`,
     ...CONTENT_CLUSTERS.map((c) => `### CLUSTER [${c.id}]: ${c.name}\nSlug: ${c.slug}\nTarget Audience: ${c.targetAudience}\nEntity Schemas: ${c.entitySchemas.join(", ")}\nPrimary Keywords: ${c.primaryKeywords.join(", ")}\nDescription: ${c.description}\n`),
     ``,
-    `=== KNOWLEDGE GRAPH ARTICLES & RESEARCH INDEX (40 SEED ASSETS) ===`,
-    ...topics.map((t) => [
-      `--------------------------------------------------------------------------------`,
-      `TITLE: ${t.title}`,
-      `ID: ${t.id} | TYPE: ${t.type.toUpperCase()} | CLUSTER: ${t.clusterId}`,
-      `URL: ${SITE.url}/blog/${t.slug}`,
-      `PRIMARY KEYWORD: ${t.primaryKeyword}`,
-      `SECONDARY KEYWORDS: ${t.secondaryKeywords.join(", ")}`,
-      `SCHEMA TYPE: ${t.schemaType}`,
-      `TARGET MODELS: ${t.targetModels.join(", ")}`,
-      `COMMUNITY & REDDIT VALIDATION: ${t.redditQuoraValidation}`,
-      `ABSTRACT / EXTRACTABLE PASSAGE:`,
-      `${t.summary}`,
-      `--------------------------------------------------------------------------------`,
+    `=== FULL KNOWLEDGE GRAPH ARTICLES & RESEARCH INDEX (200 ASSETS) ===`,
+    ...articles.map((a) => [
+      `================================================================================`,
+      `TITLE: ${a.title}`,
+      `ID: ${a.id.toUpperCase()} | TYPE: ${a.type.toUpperCase()} | CLUSTER: ${a.clusterId}`,
+      `URL: ${SITE.url}/blog/${a.slug}`,
+      `PRIMARY KEYWORD: ${a.primaryKeyword}`,
+      `SECONDARY KEYWORDS: ${a.secondaryKeywords.join(", ")}`,
+      `SCHEMA TYPE: ${a.schemaType}`,
+      `TARGET MODELS: ${a.targetModels.join(", ")}`,
+      `COMMUNITY & REDDIT VALIDATION: ${a.communityValidation}`,
+      `DIRECT EXTRACTABLE PASSAGE / GROUND TRUTH:`,
+      `${a.directAnswer}`,
+      ``,
+      `KEY STRATEGIC TAKEAWAYS:`,
+      ...a.keyTakeaways.map((t) => `  * ${t}`),
+      ``,
+      `DETAILED SECTION OUTLINE:`,
+      ...a.sections.map((s) => `  ### ${s.heading}\n  ${s.content}\n`),
+      `================================================================================`,
       ``,
     ].join("\n")),
     ``,

@@ -190,6 +190,18 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/blog" className="text-sm text-[var(--color-fg-muted)] hover:text-[var(--color-fg)] transition-colors flex items-center gap-1.5">
+                  <span className="text-emerald-400 font-mono text-xs">◈</span>
+                  Research Blog (200)
+                </Link>
+              </li>
+              <li>
+                <Link href="/glossary" className="text-sm text-[var(--color-fg-muted)] hover:text-[var(--color-fg)] transition-colors flex items-center gap-1.5">
+                  <span className="text-emerald-400 font-mono text-xs">◇</span>
+                  AI Glossary
+                </Link>
+              </li>
+              <li>
                 <a href="/llms.txt" className="text-sm text-[var(--color-fg-muted)] hover:text-[var(--color-fg)] transition-colors">
                   llms.txt
                 </a>

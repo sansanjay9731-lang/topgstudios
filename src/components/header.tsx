@@ -81,6 +81,12 @@ export function Header() {
             <Link href="/about" className={navLinkCls}>
               About
             </Link>
+            <Link href="/blog" className={navLinkCls}>
+              Blog (200)
+            </Link>
+            <Link href="/glossary" className={navLinkCls}>
+              Glossary
+            </Link>
           </nav>
         </div>
 
@@ -299,6 +305,22 @@ export function Header() {
                 >
                   <span className="text-emerald-400">✉</span>
                   Contact Office
+                </Link>
+                <Link
+                  href="/blog"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center gap-2 rounded-xl border border-emerald-500/30 bg-emerald-950/20 p-3.5 text-sm font-medium text-emerald-300 hover:text-white"
+                >
+                  <span className="text-emerald-400">📚</span>
+                  Blog (200 Guides)
+                </Link>
+                <Link
+                  href="/glossary"
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center gap-2 rounded-xl border border-white/[0.06] bg-[#0c1017] p-3.5 text-sm font-medium text-neutral-300 hover:text-white"
+                >
+                  <span className="text-emerald-400">📖</span>
+                  AI Glossary
                 </Link>
               </div>
 

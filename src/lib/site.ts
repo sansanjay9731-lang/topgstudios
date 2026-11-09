@@ -15,7 +15,10 @@ export const SITE = {
     twitter: "https://twitter.com/sanjayyellar",
   },
   bookingUrl: "https://calendly.com/sansanjay9731/sanjay",
-  phone: "+91 98450 00000",
+  phone: "+91 99457 80634",
+  whatsappNumber: "+91 99457 80634",
+  whatsappUrl: "https://wa.me/919945780634?text=Hi%20Sanjay,%20I%20am%20interested%20in%20Top%20Gun%20Studios%20growth%20and%20AI%20search%20dominance.",
+
   address: "Bengaluru & Mumbai · Global Delivery for India, USA, UAE & UK",
   locations: [
     { city: "Bengaluru", country: "India", role: "Engineering & AI R&D HQ" },

@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { WhatsAppFloatingButton } from "@/components/WhatsAppFloatingButton";
 import { HUDCursorReticle } from "@/components/motion";
 import { SITE } from "@/lib/site";
 import "./globals.css";
@@ -105,6 +106,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <WhatsAppFloatingButton />
         <Script
           id="ld-org"
           type="application/ld+json"

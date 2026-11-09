@@ -38,6 +38,22 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--color-fg-dim)]">
+                  WhatsApp Direct
+                </p>
+                <a
+                  href={SITE.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-flex items-center gap-2 text-lg text-emerald-400 hover:text-emerald-300 font-medium"
+                >
+                  <span>{SITE.whatsappNumber}</span>
+                  <span className="text-xs font-mono uppercase bg-emerald-500/15 border border-emerald-500/30 px-2 py-0.5 rounded-full text-emerald-300">
+                    Instant Chat →
+                  </span>
+                </a>
+              </div>
+              <div>
+                <p className="font-mono text-xs uppercase tracking-[0.18em] text-[var(--color-fg-dim)]">
                   Calendar
                 </p>
                 <a
